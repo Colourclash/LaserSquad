@@ -1,5 +1,8 @@
 # LaserSquad
-Disassembly of the 1988 game Laser Squad by Julian Gollop using Spectrum Analyser.
+Partial disassembly of the 1988 game Laser Squad by Julian Gollop using Spectrum Analyser.
+
+## Status
+The disassembly is partially complete and is a WIP.
 
 ## Instructions
 To open the disassembly you need to download or build the Spectrum Analyser tool.
