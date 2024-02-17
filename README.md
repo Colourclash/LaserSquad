@@ -5,7 +5,6 @@ Disassembly of the 1988 game Laser Squad using Spectrum Analyser.
 The disassembly is partially complete and is a work in progress.
 
 ## Instructions
-## Instructions
 To open the disassembly you need to download or build the Spectrum Analyser tool.
   - Either build your own: https://github.com/TheGoodDoktor/8BitAnalysers
   - Or download a pre-built version: https://colourclash.co.uk/spectrum-analyser/
