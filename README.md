@@ -38,3 +38,6 @@ To understand how the command list system works for drawing the UI, I wrote a co
 <img width="584" alt="image" src="https://github.com/Colourclash/LaserSquad/assets/883891/65d7a413-0c5f-4799-a765-910efe80a2ea">
 
 More viewers will be added...
+
+## Disclaimer
+This repository contains Laser Squad snapshot files. This game was previously commercially available. If you own the copyright to these files please let me know and I will remove them.
