@@ -1,6 +1,8 @@
 {
     "128KGame": false,
     "LuaSourceFiles": [
+        "UtilityFunctions.lua",
+        "MapViewer.lua",
         "ViewerScript.lua",
         "CommandListViewer.lua"
     ],
