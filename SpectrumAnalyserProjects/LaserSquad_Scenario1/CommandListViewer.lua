@@ -1,4 +1,4 @@
-StringTable = 0xac05 -- this might be wrong
+StringTable = 0xac06
 CommandListTable = 0xa64e
 
 CurDrawListBase = CommandListTable
@@ -32,7 +32,7 @@ CommandListRenderer =
 	end,
 
 	skipEntries = function(self, cmdPtr, numToSkip)
-		for s=0, numToSkip do
+		for s=1, numToSkip do
 			repeat
 				local char = ReadByte(cmdPtr)
 				cmdPtr = cmdPtr + 1
@@ -170,24 +170,24 @@ CommandListRenderer =
 CommandListViewer = 
 {
 	name = "Command List Viewer",
-	cmdListNum = 0,
+	cmdListNum = 1,
 	numBytesToDraw = 0,
-	stringNum = 0,
+	stringNum = 1,
 	doubleHeight = false,
 
 	onAdd = function(self)
 		self.graphicsView = CreateZXGraphicsView(256, 512)
 		ClearGraphicsView(self.graphicsView, 0)
 		CommandListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
-		CommandListRenderer:render(self.graphicsView, 0, CommandListTable, 0, 64, false, 0)
+		CommandListRenderer:render(self.graphicsView, self.cmdListNum, CommandListTable, 0, 64, false, 0)
 	end,
 
 	onDrawUI = function(self)
 		local changedStringNum = false
 		changedStringNum, self.stringNum = imgui.InputInt("String Index", self.stringNum)
 
-		if self.stringNum < 0 then
-			self.stringNum = 0
+		if self.stringNum < 1 then
+			self.stringNum = 1
 		end
 		if self.stringNum > 168 then
 			self.stringNum = 168
@@ -197,8 +197,8 @@ CommandListViewer =
 
 		changedcmdListNum, self.cmdListNum = imgui.InputInt("Cmd List Num", self.cmdListNum)
 
-		if self.cmdListNum < 0 then
-			self.cmdListNum = 0
+		if self.cmdListNum < 1 then
+			self.cmdListNum = 1
 		end
 
 		local dblHeightchanged = false

@@ -1440,25 +1440,21 @@
                 {
                     "Address": 543,
                     "ByteSize": 2,
-                    "Comment": "save screen write address",
                     "DataType": 2
                 },
                 {
                     "Address": 545,
                     "ByteSize": 2,
-                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 547,
                     "ByteSize": 2,
-                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 549,
                     "ByteSize": 2,
-                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
@@ -1489,6 +1485,7 @@
                 {
                     "Address": 561,
                     "ByteSize": 2,
+                    "Comment": "draw the text",
                     "DataType": 2
                 },
                 {
@@ -7608,7 +7605,7 @@
                 {
                     "Address": 941,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 4
                 },
                 {
                     "Address": 944,
