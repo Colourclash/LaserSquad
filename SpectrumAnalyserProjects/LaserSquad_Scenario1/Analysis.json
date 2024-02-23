@@ -91,7 +91,9 @@
                 {
                     "Address": 772,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Flags": 2,
+                    "OperandType": 1,
+                    "SMC": true
                 },
                 {
                     "Address": 775,
@@ -261,6 +263,21 @@
                     "Address": 736,
                     "ByteSize": 32,
                     "DataType": 10
+                },
+                {
+                    "Address": 772,
+                    "DataType": 11,
+                    "InstructionAddressRef": 1526988802
+                },
+                {
+                    "Address": 773,
+                    "DataType": 11,
+                    "InstructionAddressRef": 1526988802
+                },
+                {
+                    "Address": 774,
+                    "DataType": 11,
+                    "InstructionAddressRef": 1526988802
                 }
             ],
             "LabelInfo": [
@@ -1402,6 +1419,7 @@
                 {
                     "Address": 535,
                     "ByteSize": 2,
+                    "Comment": "save screen write address",
                     "DataType": 2
                 },
                 {
@@ -1422,21 +1440,25 @@
                 {
                     "Address": 543,
                     "ByteSize": 2,
+                    "Comment": "save screen write address",
                     "DataType": 2
                 },
                 {
                     "Address": 545,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 547,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 549,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
@@ -7436,7 +7458,8 @@
                 {
                     "Address": 868,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "set default two-tone colours",
+                    "OperandType": 4
                 },
                 {
                     "Address": 871,
@@ -8234,12 +8257,12 @@
                 {
                     "Address": 876,
                     "LabelType": 1,
-                    "Name": "DrawCommandList_2"
+                    "Name": "DrawCommandList"
                 },
                 {
                     "Address": 884,
                     "LabelType": 2,
-                    "Name": "label_6774"
+                    "Name": "draw"
                 },
                 {
                     "Address": 901,
@@ -24636,12 +24659,12 @@
                 {
                     "Address": 536,
                     "ByteSize": 2,
-                    "OperandType": 4
+                    "Comment": "\"HOW MANY PLAYERS ? (PRESS 1 OR 2)\"",
+                    "OperandType": 3
                 },
                 {
                     "Address": 538,
                     "ByteSize": 3,
-                    "Comment": "draw the \"HOW MANY PLAYERS  ? PRESS 1 OR 2\" text",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -25446,7 +25469,8 @@
                 },
                 {
                     "Address": 950,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "\"PLAYER DEPLOY OBJECT press fire to deploy\""
                 },
                 {
                     "Address": 952,
