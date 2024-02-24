@@ -2,6 +2,12 @@ CharacterPixelsAddr = 0xe8df
 CharacterMapAddr = 0xd6bf
 FontPixelsAddr = 0xb239
 
+ColourFontsEnabled = true
+
+function SetColourFonts(enabled)
+	ColourFontsEnabled = enabled
+end
+
 -- Draw 8x8 character
 function DrawCharacterToView(graphicsView, charIndex, attrib, x, y)
 
@@ -25,7 +31,11 @@ end
 -- Draw 8x8 font glyph to view
 function DrawFontGlyphToView(graphicsView, glyphIndex, attrib, x, y)
 	local charPixels = GetMemPtr(FontPixelsAddr + glyphIndex * 8)
-	DrawZXBitImage(graphicsView, charPixels, x, y, 1, 1, attrib) -- draw 8 x 8 character
+	if ColourFontsEnabled then
+		DrawZXBitImage(graphicsView, charPixels, x, y, 1, 1, attrib) -- draw 8 x 8 character
+	else
+		DrawZXBitImage(graphicsView, charPixels, x, y, 1, 1, 0xe)
+	end
 end
 
 -- Draw double-height 8x16 font glyph to view using 8x8 font

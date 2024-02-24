@@ -174,10 +174,12 @@ CommandListViewer =
 	numBytesToDraw = 0,
 	stringNum = 1,
 	doubleHeight = false,
+	colourFonts = true,
 
 	onAdd = function(self)
 		self.graphicsView = CreateZXGraphicsView(256, 512)
 		ClearGraphicsView(self.graphicsView, 0)
+		SetColourFonts(self.colourFonts)
 		CommandListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
 		CommandListRenderer:render(self.graphicsView, self.cmdListNum, CommandListTable, 0, 64, false, 0)
 	end,
@@ -194,11 +196,16 @@ CommandListViewer =
 		end
 
 		local changedcmdListNum = false
-
 		changedcmdListNum, self.cmdListNum = imgui.InputInt("Cmd List Num", self.cmdListNum)
 
 		if self.cmdListNum < 1 then
 			self.cmdListNum = 1
+		end
+
+		local colourFontsChanged = false
+		colourFontsChanged, self.colourFonts = imgui.Checkbox("Colour Fonts", self.colourFonts)
+		if colourFontsChanged then
+			SetColourFonts(self.colourFonts)
 		end
 
 		local dblHeightchanged = false
@@ -218,7 +225,7 @@ CommandListViewer =
 			DrawAddressLabel(CurDrawListCmd)
 		end
 
-		if changedcmdListNum == true or changedNumBytes == true or changedStringNum == true or dblHeightchanged == true then
+		if changedcmdListNum or changedNumBytes or changedStringNum or dblHeightchanged or colourFontsChanged then
 			ClearGraphicsView(self.graphicsView, 0)
 			CommandListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
 			CommandListRenderer:render(self.graphicsView, self.cmdListNum, CommandListTable, 0, 64, self.doubleHeight, self.numBytesToDraw)
