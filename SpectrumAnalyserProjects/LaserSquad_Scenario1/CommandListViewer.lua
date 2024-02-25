@@ -73,28 +73,23 @@ CmdListRenderer =
 		end
 	end,
 
-	processNextCommand = function(self, cmd, cmdPtr, addComment)
+	processNextCommand = function(self, cmd, cmdPtr)
 		cmdPtr = cmdPtr + 1
 		local isCommand = true
 		if cmd > 0xf1 then
 			if cmd == 0xf3 then 
 				-- single height font (think this might do more?)
 				--self.doubleHeight = false
-				self:addComment(cmdPtr - 1, "?", addComment)
 			elseif cmd == 0xf4 then
 				-- ?
-				self:addComment(cmdPtr - 1, "?", addComment)
 			elseif cmd == 0xf5 then 
-				self:addComment(cmdPtr - 1, "[Position]", addComment)
 				-- set cursor position
 				self.yp = ReadByte(cmdPtr) * 8
 				cmdPtr = cmdPtr + 1
-				local v = ReadByte(cmdPtr) * 8
 				self.xp = ReadByte(cmdPtr) * 8
 				self.lastSetXPosCmd = self.xp
 				cmdPtr = cmdPtr + 1
 			elseif cmd == 0xf6 then
-				self:addComment(cmdPtr - 1, "[Colour]", addComment)
 				-- change attribute colour
 				self.attrib1 = ReadByte(cmdPtr)
 				cmdPtr = cmdPtr + 1
@@ -105,28 +100,22 @@ CmdListRenderer =
 					self.attrib2 = self.attrib1
 				end
 			elseif cmd == 0xf7 then
-				self:addComment(cmdPtr - 1, "[Vertical]", addComment)
 				-- draw vertically
 				self.drawVertical = true
 			elseif cmd == 0xf8 then
-				self:addComment(cmdPtr - 1, "[Horizontal]", addComment)
 				-- draw horizontally
 				self.drawVertical = false
 			elseif cmd == 0xf9 then
-				self:addComment(cmdPtr - 1, "[Single Height Font]", addComment)
 				-- single height
 				self.doubleHeight = false
 			elseif cmd == 0xfa then
-				self:addComment(cmdPtr - 1, "[Double Height Font]", addComment)
 				-- set double height font
 				self.doubleHeight = true
 			elseif cmd == 0xfb then
-				self:addComment(cmdPtr - 1, "[String Mode]", addComment)
 				-- treat all following data as string/font data
 				self.treatAsText = true
 			end
 		elseif cmd == 0x2f then
-			self:addComment(cmdPtr - 1, "[Carriage Return]", addComment)
 			-- move down a row
 			if self.doubleHeight == true then
 				self.yp = self.yp + 16
@@ -137,9 +126,6 @@ CmdListRenderer =
 		else
 			-- not a command. byte will be treated as a string or character lookup
 			isCommand = false
-			if self.treatAsText == false then
-				self:addComment(cmdPtr - 1, GetString(cmd), addComment)
-			end
 		end
 		return isCommand, cmdPtr
 	end,
@@ -163,12 +149,7 @@ CmdListRenderer =
 
 			if isCommand == false then
 				if self.treatAsText == true then
-					DrawFontGlyphToView(graphicsView, cmd - 32, self.attrib1, self.xp + x, self.yp + y)
-					if self.drawVertical == true then
-						self.yp = self.yp + 8
-					else
-						self.xp = self.xp + 8
-					end
+					self:drawFontGlyph(graphicsView, cmd - 32, x, y)
 				else
 					self:drawStringInternal(graphicsView, cmd, StringTable, x, y)
 				end
@@ -202,13 +183,21 @@ CmdListRenderer =
 			isCommand, cmdPtr = self:processNextCommand(cmd, cmdPtr, false)
 
 			if isCommand == false then
-				if self.doubleHeight == true then
-					DrawDoubleHeightFontGlyphToView(graphicsView, cmd - 32, self.attrib1, self.attrib2, self.xp + x, self.yp + y)
-				else			
-					DrawFontGlyphToView(graphicsView, cmd - 32, self.attrib1, self.xp + x, self.yp + y)
-				end
-				self.xp = self.xp + 8
+				self:drawFontGlyph(graphicsView, cmd - 32, x, y)
 			end
+		end
+	end,
+
+	drawFontGlyph = function(self, graphicsView, glyphIndex, x, y)
+		if self.doubleHeight == true then
+			DrawDoubleHeightFontGlyphToView(graphicsView, glyphIndex, self.attrib1, self.attrib2, self.xp + x, self.yp + y)
+		else			
+			DrawFontGlyphToView(graphicsView, glyphIndex, self.attrib1, self.xp + x, self.yp + y)
+		end
+		if self.drawVertical == true then
+			self.yp = self.yp + 8
+		else
+			self.xp = self.xp + 8
 		end
 	end,
 
@@ -242,6 +231,50 @@ CmdListRenderer =
 		end
 	end,
 
+	-- Set data comments for a single command
+	setCommandComments = function(self, cmd, cmdPtr)
+		if cmd > 0xf1 then
+			if cmd == 0xf3 then 
+				SetDataItemComment(cmdPtr, "?")
+			elseif cmd == 0xf4 then
+				SetDataItemComment(cmdPtr, "?")
+			elseif cmd == 0xf5 then 
+				SetDataItemComment(cmdPtr, "[Position]")
+				SetDataItemComment(cmdPtr + 1, "y = " .. self.yp)
+				SetDataItemComment(cmdPtr + 2, "x = " .. self.xp)
+			elseif cmd == 0xf6 then
+				SetDataItemComment(cmdPtr, "[Colour]")
+				if self.doubleHeight then
+					SetDataItemComment(cmdPtr + 1, "Attrib 1")
+					SetDataItemComment(cmdPtr + 2, "Attrib 2")
+				else
+					SetDataItemComment(cmdPtr + 1, "Attrib")
+				end
+			elseif cmd == 0xf7 then
+				SetDataItemComment(cmdPtr, "[Vertical]")
+			elseif cmd == 0xf8 then
+				SetDataItemComment(cmdPtr, "[Horizontal]")
+			elseif cmd == 0xf9 then	
+				SetDataItemComment(cmdPtr, "[Single Height]")
+			elseif cmd == 0xfa then
+				SetDataItemComment(cmdPtr, "[Double Height]")
+			elseif cmd == 0xfb then
+				SetDataItemComment(cmdPtr, "[String Mode]")
+			end
+		elseif cmd == 0x2f then
+			SetDataItemComment(cmdPtr, "[Return]")
+		else
+			-- not a command. byte will be treated as a string or character lookup
+			if self.treatAsText == false then
+				if cmd == 1 then
+					SetDataItemComment(cmdPtr, "{Emblem}")
+				else
+					SetDataItemComment(cmdPtr, "'" .. GetString(cmd) .. "'")
+				end
+			end
+		end
+	end,
+
 	-- For a cmd list, set comments in the code analysis describing what each command does 
 	addDataComments = function(self, cmdListIndex, doubleHeight)
 		self:reset()
@@ -258,7 +291,9 @@ CmdListRenderer =
 				return -- we have hit the terminating "|"" character
 			end
 
+			local cmdPtrTmp = cmdPtr
 			isCommand, cmdPtr = self:processNextCommand(cmd, cmdPtr, true)
+			self:setCommandComments(cmd, cmdPtrTmp)
 		end
 	end,
 }
@@ -326,7 +361,6 @@ CommandListViewer =
 			self.stringNum = 168
 		end
 
-		imgui.Text("Cur String")
 		DrawAddressLabel(CurString)
 
 		local changedcmdListNum = false
@@ -336,7 +370,6 @@ CommandListViewer =
 			self.cmdListNum = 1
 		end
 
-		imgui.Text("Cmd List")
 		DrawAddressLabel(CurDrawListBase)
 
 		local colourFontsChanged = false
