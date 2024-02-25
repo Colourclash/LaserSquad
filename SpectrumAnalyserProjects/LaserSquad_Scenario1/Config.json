@@ -12,12 +12,12 @@
         "ViewConfigs": [
             {
                 "Enabled": true,
-                "ViewAddress": 26500,
-                "ViewAddressBank": 2
+                "ViewAddress": 36966,
+                "ViewAddressBank": 3
             },
             {
                 "Enabled": true,
-                "ViewAddress": 42753,
+                "ViewAddress": 45237,
                 "ViewAddressBank": 3
             },
             {
