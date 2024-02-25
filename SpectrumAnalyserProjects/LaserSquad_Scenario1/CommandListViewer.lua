@@ -3,12 +3,12 @@ StringTable = 0xac06
 CommandListTable = 0xa64e
 DrawCmdListFunc = 0x676c
 DrawCmdListFuncDblHeight = 0x675e
+CurDrawListBase = CommandListTable 	-- address of current cmd list being drawn
+CurDrawListCmd = CommandListTable 	-- address of current individual cmd being processed
+CurString = StringTable				-- address of current string being drawn
 
-CurDrawListBase = CommandListTable
-CurDrawListCmd = CommandListTable
-
--- Lookup a string from the string table
-function GetString(index)
+-- Lookup a string from the string table. Special characters will be ignored
+function GetString(index, doubleHeight)
 	local str = ""
 	local curPtr = CmdListRenderer:skipEntries(StringTable, index)
 	while true do
@@ -16,7 +16,16 @@ function GetString(index)
 		if char == 0x7c then
 			return str
 		end
-		str = str .. string.char(char)
+		if char == 0xf6 then
+			curPtr = curPtr + 1 
+			if doubleHeight then
+				curPtr = curPtr + 1 
+			end
+		end	
+		if char > 31 and char < 96 and char ~= 0x2f then
+			--print(string.char(char) .. " = " .. tostring(char))
+			str = str .. string.char(char)
+		end
 		curPtr = curPtr + 1 
 	end
 end
@@ -154,6 +163,37 @@ CmdListRenderer =
 		end
 	end,
 
+
+	drawString = function(self, graphicsView, stringIndex, stringTableAddr, x, y)
+		self:reset()
+		CurString = self:drawStringInternal(graphicsView, stringIndex, stringTableAddr, x, y)
+	end,
+
+	drawStringInternal = function(self, graphicsView, stringIndex, stringTableAddr, x, y)
+		local cmdPtr = self:skipEntries(stringTableAddr, stringIndex)
+		local isCommand = nil
+		local stringStart = cmdPtr
+
+		while true do
+			local cmd = ReadByte(cmdPtr)
+			
+			if cmd == 0x7c then
+				return stringStart -- we have hit the terminating "|"" character
+			end
+
+			isCommand, cmdPtr = self:processNextCommand(cmd, cmdPtr)
+
+			if isCommand == false then
+				if self.doubleHeight == true then
+					DrawDoubleHeightFontGlyphToView(graphicsView, cmd - 32, self.attrib1, self.attrib2, self.xp + x, self.yp + y)
+				else			
+					DrawFontGlyphToView(graphicsView, cmd - 32, self.attrib1, self.xp + x, self.yp + y)
+				end
+				self.xp = self.xp + 8
+			end
+		end
+	end,
+
 	-- Get a text summary of a command list
 	getTextSummary = function(self, cmdListIndex, doubleHeight, numBytes)
 		local str = ""
@@ -175,43 +215,17 @@ CmdListRenderer =
 				if self.treatAsText == true then
 					-- ?
 				else
-					str = str .. GetString(cmd) .. " "
+					local s = GetString(cmd, doubleHeight)
+					if s ~= "" then
+						str = str .. s .. " "
+					end
 				end
-			end
-		end
-	end,
-
-	drawString = function(self, graphicsView, stringIndex, stringTableAddr, x, y)
-		self:reset()
-		self:drawStringInternal(graphicsView, stringIndex, stringTableAddr, x, y)
-	end,
-
-	drawStringInternal = function(self, graphicsView, stringIndex, stringTableAddr, x, y)
-		local cmdPtr = self:skipEntries(stringTableAddr, stringIndex)
-		local isCommand = nil
-
-		while true do
-			local cmd = ReadByte(cmdPtr)
-			
-			if cmd == 0x7c then
-				return -- we have hit the terminating "|"" character
-			end
-
-			isCommand, cmdPtr = self:processNextCommand(cmd, cmdPtr)
-
-			if isCommand == false then
-				if self.doubleHeight == true then
-					DrawDoubleHeightFontGlyphToView(graphicsView, cmd - 32, self.attrib1, self.attrib2, self.xp + x, self.yp + y)
-				else			
-					DrawFontGlyphToView(graphicsView, cmd - 32, self.attrib1, self.xp + x, self.yp + y)
-				end
-				self.xp = self.xp + 8
 			end
 		end
 	end,
 }
 
--- Find all calls to draw command lists in Spectrum RAM
+-- Find and draw all calls to draw command lists in Spectrum RAM
 function DrawCmdListCalls(doubleHeight)
 	-- 3e NN 		LD NN
 	-- cd XX XX		CALL XXXX
@@ -251,10 +265,11 @@ CommandListViewer =
 	stringNum = 1,
 	doubleHeight = false,
 	colourFonts = true,
+	drawCalls = false,
 
 	onAdd = function(self)
-		self.graphicsView = CreateZXGraphicsView(256, 512)
-		ClearGraphicsView(self.graphicsView, 0)
+		self.graphicsView = CreateZXGraphicsView(256, 256)
+		ClearGraphicsView(self.graphicsView, 0xff202020)
 		SetColourFonts(self.colourFonts)
 		CmdListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
 		CmdListRenderer:render(self.graphicsView, self.cmdListNum, 0, 64, false, 0)
@@ -271,12 +286,18 @@ CommandListViewer =
 			self.stringNum = 168
 		end
 
+		imgui.Text("Cur String")
+		DrawAddressLabel(CurString)
+
 		local changedcmdListNum = false
 		changedcmdListNum, self.cmdListNum = imgui.InputInt("Cmd List Num", self.cmdListNum)
 
 		if self.cmdListNum < 1 then
 			self.cmdListNum = 1
 		end
+
+		imgui.Text("Cmd List")
+		DrawAddressLabel(CurDrawListBase)
 
 		local colourFontsChanged = false
 		colourFontsChanged, self.colourFonts = imgui.Checkbox("Colour Fonts", self.colourFonts)
@@ -287,11 +308,9 @@ CommandListViewer =
 		local dblHeightchanged = false
 		dblHeightchanged, self.doubleHeight = imgui.Checkbox("Double Height", self.doubleHeight)
 
-		imgui.Text("Draw List")
-		DrawAddressLabel(CurDrawListBase)
 
 		local changedNumBytes = false
-		changedNumBytes, self.numBytesToDraw = imgui.InputInt("Num Commands To Process", self.numBytesToDraw)
+		changedNumBytes, self.numBytesToDraw = imgui.InputInt("Num Cmd Bytes To Process", self.numBytesToDraw)
 
 		if self.numBytesToDraw < 0 then
 			self.numBytesToDraw = 0
@@ -302,19 +321,24 @@ CommandListViewer =
 		end
 
 		if changedcmdListNum or changedNumBytes or changedStringNum or dblHeightchanged or colourFontsChanged then
-			ClearGraphicsView(self.graphicsView, 0)
+			ClearGraphicsView(self.graphicsView, 0xff202020)
 			CmdListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
-			--print("string is " .. CmdListRenderer:getTextSummary(self.cmdListNum, self.doubleHeight, 0))
 			CmdListRenderer:render(self.graphicsView, self.cmdListNum, 0, 64, self.doubleHeight, self.numBytesToDraw)
+			print("Cmd list summary is '" .. CmdListRenderer:getTextSummary(self.cmdListNum, self.doubleHeight, 0) .. "'")
 		end
 
 		-- Update and draw to screen
 		DrawGraphicsView(self.graphicsView)
 		
-		imgui.Text("Cmd List calls:")
-		DrawCmdListCalls(false)
-		imgui.Text("\nCmd List double height calls:")
-		DrawCmdListCalls(true)
+		local drawCallsChanged = false
+		drawCallsChanged, self.drawCalls = imgui.Checkbox("Show Draw Calls", self.drawCalls)
+
+		if self.drawCalls == true then
+			imgui.Text("Cmd List calls:")
+			DrawCmdListCalls(false)
+			imgui.Text("\nCmd List double height calls:")
+			DrawCmdListCalls(true)
+		end
 	end,
 
 }
