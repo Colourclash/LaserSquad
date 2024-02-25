@@ -195,7 +195,7 @@ CmdListRenderer =
 	end,
 
 	-- Get a text summary of a command list
-	getTextSummary = function(self, cmdListIndex, doubleHeight, numBytes)
+	getTextSummary = function(self, cmdListIndex, doubleHeight)
 		local str = ""
 		self:reset()
 		self.doubleHeight = doubleHeight
@@ -249,7 +249,7 @@ function DrawCmdListCalls(doubleHeight)
 					imgui.Text("Cmd list " .. tostring(byte2) .. " at ")
 					DrawAddressLabel(curPtr)
 					imgui.SameLine(500)
-					imgui.Text(CmdListRenderer:getTextSummary(byte2, 0, 0))
+					imgui.Text(CmdListRenderer:getTextSummary(byte2, doubleHeight))
 				end
 			end
 		end
