@@ -116,11 +116,11 @@ CmdListRenderer =
 		return isCommand, cmdPtr
 	end,
 
-	render = function(self, graphicsView, cmdListIndex, cmdListTable, x, y, doubleHeight, numBytes)
+	render = function(self, graphicsView, cmdListIndex, x, y, doubleHeight, numBytes)
 		self:reset()
 		self.doubleHeight = doubleHeight
 
-		local cmdPtr = self:skipEntries(cmdListTable, cmdListIndex)
+		local cmdPtr = self:skipEntries(CommandListTable, cmdListIndex)
 		local isCommand = nil
 
 		CurDrawListBase = cmdPtr
@@ -155,12 +155,12 @@ CmdListRenderer =
 	end,
 
 	-- Get a text summary of a command list
-	getTextSummary = function(self, cmdListIndex, cmdListTable, doubleHeight, numBytes)
+	getTextSummary = function(self, cmdListIndex, doubleHeight, numBytes)
 		local str = ""
 		self:reset()
 		self.doubleHeight = doubleHeight
 
-		local cmdPtr = self:skipEntries(cmdListTable, cmdListIndex)
+		local cmdPtr = self:skipEntries(CommandListTable, cmdListIndex)
 		local isCommand = nil
 
 		while true do
@@ -211,6 +211,7 @@ CmdListRenderer =
 	end,
 }
 
+-- Find all calls to draw command lists in Spectrum RAM
 function DrawCmdListCalls(doubleHeight)
 	-- 3e NN 		LD NN
 	-- cd XX XX		CALL XXXX
@@ -224,15 +225,17 @@ function DrawCmdListCalls(doubleHeight)
 	while curPtr < 0xffff do
 		local byte1 = ReadByte(curPtr)
 		if byte1 == 0x3e then
+			-- found possible LD instruction
 			local byte3 = ReadByte(curPtr + 2)
 			if byte3 == 0xcd then
+				-- found possible CALL instruction
 				local word = ReadWord(curPtr + 3)
 				if word == funcAddr then
 					local byte2 = ReadByte(curPtr + 1)
-					imgui.Text("Call " .. tostring(byte2) .. " at ")
+					imgui.Text("Cmd list " .. tostring(byte2) .. " at ")
 					DrawAddressLabel(curPtr)
-					imgui.SameLine()
-					imgui.Text(CmdListRenderer:getTextSummary(byte2, CommandListTable, 0, 0))
+					imgui.SameLine(500)
+					imgui.Text(CmdListRenderer:getTextSummary(byte2, 0, 0))
 				end
 			end
 		end
@@ -254,7 +257,7 @@ CommandListViewer =
 		ClearGraphicsView(self.graphicsView, 0)
 		SetColourFonts(self.colourFonts)
 		CmdListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
-		CmdListRenderer:render(self.graphicsView, self.cmdListNum, CommandListTable, 0, 64, false, 0)
+		CmdListRenderer:render(self.graphicsView, self.cmdListNum, 0, 64, false, 0)
 	end,
 
 	onDrawUI = function(self)
@@ -301,17 +304,17 @@ CommandListViewer =
 		if changedcmdListNum or changedNumBytes or changedStringNum or dblHeightchanged or colourFontsChanged then
 			ClearGraphicsView(self.graphicsView, 0)
 			CmdListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
-			--print("string is " .. CmdListRenderer:getTextSummary(self.cmdListNum, CommandListTable, self.doubleHeight, 0))
-			CmdListRenderer:render(self.graphicsView, self.cmdListNum, CommandListTable, 0, 64, self.doubleHeight, self.numBytesToDraw)
+			--print("string is " .. CmdListRenderer:getTextSummary(self.cmdListNum, self.doubleHeight, 0))
+			CmdListRenderer:render(self.graphicsView, self.cmdListNum, 0, 64, self.doubleHeight, self.numBytesToDraw)
 		end
 
 		-- Update and draw to screen
 		DrawGraphicsView(self.graphicsView)
 		
 		imgui.Text("Cmd List calls:")
-		DrawCmdListCalls(0x676c)
+		DrawCmdListCalls(false)
 		imgui.Text("\nCmd List double height calls:")
-		DrawCmdListCalls(0x675e)
+		DrawCmdListCalls(true)
 	end,
 
 }
