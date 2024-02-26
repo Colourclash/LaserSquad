@@ -11,6 +11,15 @@ CurString = StringTable				-- address of current string being drawn
 CmdListMaxIndex = 109
 StringMaxIndex = 168
 
+CmdListIsDoubleHeight = {}
+for i=28, 40 do
+	CmdListIsDoubleHeight[i] = true
+end
+CmdListIsDoubleHeight[69] = true
+CmdListIsDoubleHeight[70] = true
+CmdListIsDoubleHeight[106] = true
+CmdListIsDoubleHeight[107] = true
+
 -- Lookup a string from the string table. Special characters will be ignored
 function GetString(index, doubleHeight)
 	local str = ""
@@ -47,6 +56,7 @@ CmdListRenderer =
 	attrib2 = 0xf,
 	lastSetXPosCmd = 0,
 	doubleHeight = false,
+	spaces = true, -- spaces between strings
 
 	reset = function(self)
 		self.treatAsText = false
@@ -59,6 +69,7 @@ CmdListRenderer =
 		self.attrib2 = 0xf
 		self.lastSetXPosCmd = 0
 		self.doubleHeight = false
+		self.spaces = true
 	end,
 
 	skipEntries = function(self, cmdPtr, numToSkip)
@@ -82,10 +93,9 @@ CmdListRenderer =
 		local isCommand = true
 		if cmd > 0xf1 then
 			if cmd == 0xf3 then 
-				-- single height font (think this might do more?)
-				--self.doubleHeight = false
+				self.spaces = false
 			elseif cmd == 0xf4 then
-				-- ?
+				self.spaces = true
 			elseif cmd == 0xf5 then 
 				-- set cursor position
 				self.yp = ReadByte(cmdPtr) * 8
@@ -181,6 +191,9 @@ CmdListRenderer =
 			local cmd = ReadByte(cmdPtr)
 			
 			if cmd == 0x7c then
+				if self.spaces then
+					self.xp = self.xp + 8
+				end
 				return stringStart -- we have hit the terminating "|"" character
 			end
 
@@ -239,9 +252,9 @@ CmdListRenderer =
 	setCommandComments = function(self, cmd, cmdPtr)
 		if cmd > 0xf1 then
 			if cmd == 0xf3 then 
-				SetDataItemComment(cmdPtr, "?")
+				SetDataItemComment(cmdPtr, "[Spaces]")
 			elseif cmd == 0xf4 then
-				SetDataItemComment(cmdPtr, "?")
+				SetDataItemComment(cmdPtr, "[No Spaces]")
 			elseif cmd == 0xf5 then 
 				SetDataItemComment(cmdPtr, "[Position]")
 				SetDataItemComment(cmdPtr + 1, "y = " .. self.yp)
@@ -302,7 +315,7 @@ CmdListRenderer =
 	end,
 }
 
-CmdListIsDoubleHeight = {}
+
 
 -- Find and optionally display all calls to draw command lists in Spectrum RAM
 function FindCmdListCalls(doubleHeight, display)
