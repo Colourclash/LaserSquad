@@ -7,6 +7,10 @@ CurDrawListBase = CommandListTable 	-- address of current cmd list being drawn
 CurDrawListCmd = CommandListTable 	-- address of current individual cmd being processed
 CurString = StringTable				-- address of current string being drawn
 
+-- Constants
+CmdListMaxIndex = 109
+StringMaxIndex = 168
+
 -- Lookup a string from the string table. Special characters will be ignored
 function GetString(index, doubleHeight)
 	local str = ""
@@ -262,7 +266,7 @@ CmdListRenderer =
 				SetDataItemComment(cmdPtr, "[String Mode]")
 			end
 		elseif cmd == 0x2f then
-			SetDataItemComment(cmdPtr, "[Return]")
+			SetDataItemComment(cmdPtr, "[New Line]")
 		else
 			-- not a command. byte will be treated as a string or character lookup
 			if self.treatAsText == false then
@@ -298,8 +302,10 @@ CmdListRenderer =
 	end,
 }
 
--- Find and display all calls to draw command lists in Spectrum RAM
-function DrawCmdListCalls(doubleHeight)
+CmdListIsDoubleHeight = {}
+
+-- Find and optionally display all calls to draw command lists in Spectrum RAM
+function FindCmdListCalls(doubleHeight, display)
 	-- 3e NN 		LD NN
 	-- cd XX XX		CALL XXXX
 	local funcAddr
@@ -311,20 +317,31 @@ function DrawCmdListCalls(doubleHeight)
 	local curPtr = 0x5b00
 	while curPtr < 0xffff do
 		local byte1 = ReadByte(curPtr)
-		if byte1 == 0x3e then
-			-- found possible LD instruction
-			local byte3 = ReadByte(curPtr + 2)
-			if byte3 == 0xcd then
-				-- found possible CALL instruction
-				local word = ReadWord(curPtr + 3)
-				if word == funcAddr then
-					local byte2 = ReadByte(curPtr + 1)
-					imgui.Text("Cmd list " .. tostring(byte2) .. " at ")
+		local byte3 = ReadByte(curPtr + 2)
+		if byte3 == 0xcd then
+			-- found possible CALL instruction
+			local word = ReadWord(curPtr + 3)
+			if word == funcAddr then
+				local cmdIndex = nil
+				if byte1 == 0x3e then
+					-- found possible LD instruction that loads the cmd list index
+					cmdIndex = ReadByte(curPtr + 1)
+				end
+				if display then
+					if cmdIndex == nil then
+						imgui.Text("Unknown cmd list at ")
+					else
+						imgui.Text("Cmd list " .. tostring(cmdIndex) .. " at ")
+					end
 					DrawAddressLabel(curPtr)
-					imgui.SameLine(500)
-					imgui.Text(CmdListRenderer:getTextSummary(byte2, doubleHeight))
-
-					--CmdListRenderer:addDataComments(byte2, doubleHeight)
+					if cmdIndex ~= nil then 
+						imgui.SameLine(500)
+						imgui.Text(CmdListRenderer:getTextSummary(cmdIndex, doubleHeight)) 
+					end
+				else
+					if cmdIndex ~= nil then
+						CmdListIsDoubleHeight[cmdIndex] = doubleHeight
+					end
 				end
 			end
 		end
@@ -348,6 +365,8 @@ CommandListViewer =
 		SetColourFonts(self.colourFonts)
 		CmdListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
 		CmdListRenderer:render(self.graphicsView, self.cmdListNum, 0, 64, false, 0)
+		FindCmdListCalls(false, false)
+		FindCmdListCalls(true, false)
 	end,
 
 	onDrawUI = function(self)
@@ -357,8 +376,8 @@ CommandListViewer =
 		if self.stringNum < 1 then
 			self.stringNum = 1
 		end
-		if self.stringNum > 168 then
-			self.stringNum = 168
+		if self.stringNum > StringMaxIndex then
+			self.stringNum = StringMaxIndex
 		end
 
 		DrawAddressLabel(CurString)
@@ -368,6 +387,9 @@ CommandListViewer =
 
 		if self.cmdListNum < 1 then
 			self.cmdListNum = 1
+		end
+		if self.cmdListNum > CmdListMaxIndex then
+			self.cmdListNum = CmdListMaxIndex
 		end
 
 		DrawAddressLabel(CurDrawListBase)
@@ -381,7 +403,6 @@ CommandListViewer =
 		local dblHeightchanged = false
 		dblHeightchanged, self.doubleHeight = imgui.Checkbox("Double Height", self.doubleHeight)
 
-
 		local changedNumBytes = false
 		changedNumBytes, self.numBytesToDraw = imgui.InputInt("Num Cmd Bytes To Process", self.numBytesToDraw)
 
@@ -394,6 +415,15 @@ CommandListViewer =
 		end
 
 		if changedcmdListNum or changedNumBytes or changedStringNum or dblHeightchanged or colourFontsChanged then
+			
+			if dblHeightchanged == false then
+				if CmdListIsDoubleHeight[self.cmdListNum] == nil then
+					self.doubleHeight = false
+				else
+					self.doubleHeight = CmdListIsDoubleHeight[self.cmdListNum]
+				end
+			end
+
 			ClearGraphicsView(self.graphicsView, 0xff202020)
 			CmdListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
 			CmdListRenderer:render(self.graphicsView, self.cmdListNum, 0, 64, self.doubleHeight, self.numBytesToDraw)
@@ -420,9 +450,9 @@ CommandListViewer =
 
 		if self.drawCalls == true then
 			imgui.Text("Cmd List calls:")
-			DrawCmdListCalls(false)
+			FindCmdListCalls(false, true)
 			imgui.Text("\nCmd List double height calls:")
-			DrawCmdListCalls(true)
+			FindCmdListCalls(true, true)
 		end
 	end,
 
