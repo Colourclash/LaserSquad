@@ -91,7 +91,9 @@
                 {
                     "Address": 772,
                     "ByteSize": 1,
-                    "OperandType": 1
+                    "Flags": 2,
+                    "OperandType": 1,
+                    "SMC": true
                 },
                 {
                     "Address": 775,
@@ -261,6 +263,11 @@
                     "Address": 736,
                     "ByteSize": 32,
                     "DataType": 10
+                },
+                {
+                    "Address": 772,
+                    "DataType": 11,
+                    "InstructionAddressRef": 1526988802
                 },
                 {
                     "Address": 773,
@@ -2416,7 +2423,7 @@
                     "Address": 415,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_5D9F"
+                    "Name": "maybeCmdListIndex"
                 },
                 {
                     "Address": 416,
