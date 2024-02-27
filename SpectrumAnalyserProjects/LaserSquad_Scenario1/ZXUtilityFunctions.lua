@@ -1,7 +1,3 @@
-CharacterPixelsAddr = 0xe8df
-CharacterMapAddr = 0xd6bf
-FontPixelsAddr = 0xb239
-
 ColourFontsEnabled = true
 
 function SetColourFonts(enabled)

@@ -1,5 +1,3 @@
-TileLookupTable = 0xe65f
-
 MapWidth = 80
 MapHeight = 50
 

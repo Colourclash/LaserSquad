@@ -91,9 +91,7 @@
                 {
                     "Address": 772,
                     "ByteSize": 1,
-                    "Flags": 2,
-                    "OperandType": 1,
-                    "SMC": true
+                    "OperandType": 1
                 },
                 {
                     "Address": 775,
@@ -263,11 +261,6 @@
                     "Address": 736,
                     "ByteSize": 32,
                     "DataType": 10
-                },
-                {
-                    "Address": 772,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1526988802
                 },
                 {
                     "Address": 773,

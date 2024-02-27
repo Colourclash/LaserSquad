@@ -1,8 +1,3 @@
--- Addresses in Spectrum RAM
-CommandListTable = 0xa64e
-StringTable = 0xac06
-DrawCmdListFunc = 0x676c
-DrawCmdListFuncDblHeight = 0x675e
 CurDrawListBase = CommandListTable 	-- address of current cmd list being drawn
 CurDrawListCmd = CommandListTable 	-- address of current individual cmd being processed
 CurString = StringTable				-- address of current string being drawn
