@@ -39,5 +39,7 @@ To understand how the command list system works for drawing the UI, I wrote a co
 
 More viewers will be added...
 
+
 ## Disclaimer
+Julian Gollop is the original author of the game, and owner of the ideas therein.
 This repository contains Laser Squad snapshot files. This game was previously commercially available. If you own the copyright to these files please let me know and I will remove them.
