@@ -6,6 +6,7 @@ CurString = StringTable				-- address of current string being drawn
 CmdListMaxIndex = 109
 StringMaxIndex = 168
 
+-- Store which command lists are designed to be called with double height flag set by default
 CmdListIsDoubleHeight = {}
 for i=28, 40 do
 	CmdListIsDoubleHeight[i] = true
@@ -47,8 +48,8 @@ CmdListRenderer =
 	xp = 0,
 	yp = 0,
 	drawVertical = false,
-	attrib1 = 0xf,
-	attrib2 = 0xf,
+	colour1 = 0xf,
+	colour2 = 0xf,
 	lastSetXPosCmd = 0,
 	doubleHeight = false,
 	spaces = true, -- spaces between strings
@@ -60,8 +61,8 @@ CmdListRenderer =
 		self.xp = 0
 		self.yp = 0
 		self.drawVertical = false
-		self.attrib1 = 0xf
-		self.attrib2 = 0xf
+		self.colour1 = 0xf
+		self.colour2 = 0xf
 		self.lastSetXPosCmd = 0
 		self.doubleHeight = false
 		self.spaces = true
@@ -100,13 +101,13 @@ CmdListRenderer =
 				cmdPtr = cmdPtr + 1
 			elseif cmd == 0xf6 then
 				-- change attribute colour
-				self.attrib1 = ReadByte(cmdPtr)
+				self.colour1 = ReadByte(cmdPtr)
 				cmdPtr = cmdPtr + 1
 				if self.doubleHeight == true then
-					self.attrib2 = ReadByte(cmdPtr)
+					self.colour2 = ReadByte(cmdPtr)
 					cmdPtr = cmdPtr + 1
 				else
-					self.attrib2 = self.attrib1
+					self.colour2 = self.colour1
 				end
 			elseif cmd == 0xf7 then
 				-- draw vertically
@@ -202,9 +203,9 @@ CmdListRenderer =
 
 	drawFontGlyph = function(self, graphicsView, glyphIndex, x, y)
 		if self.doubleHeight == true then
-			DrawDoubleHeightFontGlyphToView(graphicsView, glyphIndex, self.attrib1, self.attrib2, self.xp + x, self.yp + y)
+			DrawDoubleHeightFontGlyphToView(graphicsView, glyphIndex, self.colour1, self.colour2, self.xp + x, self.yp + y)
 		else			
-			DrawFontGlyphToView(graphicsView, glyphIndex, self.attrib1, self.xp + x, self.yp + y)
+			DrawFontGlyphToView(graphicsView, glyphIndex, self.colour1, self.xp + x, self.yp + y)
 		end
 		if self.drawVertical == true then
 			self.yp = self.yp + 8
@@ -310,9 +311,7 @@ CmdListRenderer =
 	end,
 }
 
-
-
--- Find and optionally display all calls to draw command lists in Spectrum RAM
+-- Find and optionally display all calls to draw command lists in the machine's RAM
 function FindCmdListCalls(doubleHeight, display)
 	-- 3e NN 		LD NN
 	-- cd XX XX		CALL XXXX
@@ -322,8 +321,8 @@ function FindCmdListCalls(doubleHeight, display)
 	else
 		funcAddr = DrawCmdListFunc
 	end
-	local curPtr = 0x5b00
-	while curPtr < 0xffff do
+	local curPtr = RAMSearchStart
+	while curPtr < RAMSearchEnd do
 		local byte1 = ReadByte(curPtr)
 		local byte3 = ReadByte(curPtr + 2)
 		if byte3 == 0xcd then
@@ -368,7 +367,7 @@ CommandListViewer =
 	drawCalls = false,
 
 	onAdd = function(self)
-		self.graphicsView = CreateZXGraphicsView(256, 256)
+		self.graphicsView = CreateGraphicsView(320, 256)
 		ClearGraphicsView(self.graphicsView, 0xff202020)
 		SetColourFonts(self.colourFonts)
 		CmdListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)

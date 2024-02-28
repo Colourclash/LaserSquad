@@ -46,3 +46,7 @@ function DrawDoubleHeightFontGlyphToView(graphicsView, glyphIndex, attrib1, attr
 		DrawZXBitImageFineY(graphicsView, charPixels, x, y + (yp * 2) + 1, 1, 1, attrib) -- 8 x 1 pixel strip
 	end
 end
+
+function CreateGraphicsView(width, height)
+	return CreateZXGraphicsView(width, height)
+end
