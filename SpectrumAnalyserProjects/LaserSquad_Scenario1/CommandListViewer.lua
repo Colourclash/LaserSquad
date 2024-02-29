@@ -16,29 +16,6 @@ CmdListIsDoubleHeight[70] = true
 CmdListIsDoubleHeight[106] = true
 CmdListIsDoubleHeight[107] = true
 
--- Lookup a string from the string table. Special characters will be ignored
-function GetString(index, doubleHeight)
-	local str = ""
-	local curPtr = CmdListRenderer:skipEntries(StringTable, index)
-	while true do
-		local char = ReadByte(curPtr)
-		if char == 0x7c then
-			return str
-		end
-		if char == 0xf6 then
-			curPtr = curPtr + 1 
-			if doubleHeight then
-				curPtr = curPtr + 1 
-			end
-		end	
-		if char > 31 and char < 96 and char ~= 0x2f then
-			--print(string.char(char) .. " = " .. tostring(char))
-			str = str .. string.char(char)
-		end
-		curPtr = curPtr + 1 
-	end
-end
-
 CmdListRenderer = 
 {
 	-- command related
@@ -226,19 +203,57 @@ CmdListRenderer =
 		while true do
 			local cmd = ReadByte(cmdPtr)
 			if cmd == 0x7c then
+				-- strip trailing and leading spaces
+				str = string.gsub(str, '^%s*(.-)%s*$', '%1')
 				return str
 			end
 
 			isCommand, cmdPtr = self:processNextCommand(cmd, cmdPtr)
 
+			local addSpace = false
 			if isCommand == false then
-				if self.treatAsText == true then
-					-- ?
-				else
-					local s = GetString(cmd, doubleHeight)
-					if s ~= "" then
-						str = str .. s .. " "
+				if self.treatAsText == false then
+					local s = self:getString(cmd, StringTable)
+					if s ~= '' then
+						str = str .. s
+						addSpace = self.spaces
+						if s == ' ' then
+							addSpace = true 
+						end
 					end
+				end
+			else
+				if cmd == 0x2f or cmd == 0xf5 then
+					addSpace = true
+				end
+			end
+
+			if addSpace == true then
+				if string.sub(str, -1) ~= ' ' then
+					str = str .. ' '
+				end
+			end
+		end
+	end,
+
+	-- Get a string from the string table.
+	getString = function(self, stringIndex, stringTableAddr)
+		local cmdPtr = self:skipEntries(stringTableAddr, stringIndex)
+		local isCommand = nil
+		local stringStart = cmdPtr
+		str = ""
+
+		while true do
+			local char = ReadByte(cmdPtr)
+			if char == 0x7c then
+				return str
+			end
+
+			isCommand, cmdPtr = self:processNextCommand(char, cmdPtr, false)
+
+			if isCommand == false then
+				if char > 31 and char < 96 then
+					str = str .. string.char(char)
 				end
 			end
 		end
@@ -248,9 +263,9 @@ CmdListRenderer =
 	setCommandComments = function(self, cmd, cmdPtr)
 		if cmd > 0xf1 then
 			if cmd == 0xf3 then 
-				SetDataItemComment(cmdPtr, "[Spaces]")
-			elseif cmd == 0xf4 then
 				SetDataItemComment(cmdPtr, "[No Spaces]")
+			elseif cmd == 0xf4 then
+				SetDataItemComment(cmdPtr, "[Spaces]")
 			elseif cmd == 0xf5 then 
 				SetDataItemComment(cmdPtr, "[Position]")
 				SetDataItemComment(cmdPtr + 1, "y = " .. self.yp)
@@ -280,9 +295,9 @@ CmdListRenderer =
 			-- not a command. byte will be treated as a string or character lookup
 			if self.treatAsText == false then
 				if cmd == 1 then
-					SetDataItemComment(cmdPtr, "{Emblem}")
+					SetDataItemComment(cmdPtr, "{Emblem Graphic}")
 				else
-					SetDataItemComment(cmdPtr, "'" .. GetString(cmd) .. "'")
+					SetDataItemComment(cmdPtr, "'" .. self:getString(cmd, StringTable) .. "'")
 				end
 			end
 		end
@@ -339,11 +354,14 @@ function FindCmdListCalls(doubleHeight, display)
 						imgui.Text("Unknown cmd list at ")
 					else
 						imgui.Text("Cmd list " .. tostring(cmdIndex) .. " at ")
+						--if addComment then
+						--	SetDataItemComment(curPtr, "TEST")
+						--end
 					end
 					DrawAddressLabel(curPtr)
 					if cmdIndex ~= nil then 
 						imgui.SameLine(500)
-						imgui.Text(CmdListRenderer:getTextSummary(cmdIndex, doubleHeight)) 
+						imgui.Text("'" .. CmdListRenderer:getTextSummary(cmdIndex, doubleHeight) .. "'") 
 					end
 				else
 					if cmdIndex ~= nil then
@@ -441,6 +459,10 @@ CommandListViewer =
 			CmdListRenderer:addDataComments(self.cmdListNum, self.doubleHeight)
 		end
 
+
+		-- Update and draw to screen
+		DrawGraphicsView(self.graphicsView)
+		
 		if imgui.Button("Clear All Comments") then
 			local curPtr = CommandListTable
 			while curPtr < StringTable do
@@ -449,9 +471,6 @@ CommandListViewer =
 			end
 		end
 
-		-- Update and draw to screen
-		DrawGraphicsView(self.graphicsView)
-		
 		local drawCallsChanged = false
 		drawCallsChanged, self.drawCalls = imgui.Checkbox("Show Draw Calls", self.drawCalls)
 
