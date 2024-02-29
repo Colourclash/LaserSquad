@@ -19,7 +19,7 @@ CmdListIsDoubleHeight[107] = true
 CmdListRenderer = 
 {
 	-- command related
-	treatAsText = false,
+	charMode = false,
 
 	-- drawing state
 	xp = 0,
@@ -32,7 +32,7 @@ CmdListRenderer =
 	spaces = true, -- spaces between strings
 
 	reset = function(self)
-		self.treatAsText = false
+		self.charMode = false
 
 		-- reset drawing state
 		self.xp = 0
@@ -53,12 +53,6 @@ CmdListRenderer =
 			until char == 0x7c -- "|" character
 		end
 		return cmdPtr
-	end,
-
-	addComment = function(self, addr, comment, add)
-		if add == true then
-			SetDataItemComment(addr, comment)
-		end
 	end,
 
 	processNextCommand = function(self, cmd, cmdPtr)
@@ -99,8 +93,11 @@ CmdListRenderer =
 				-- set double height font
 				self.doubleHeight = true
 			elseif cmd == 0xfb then
-				-- treat all following data as string/font data
-				self.treatAsText = true
+				-- treat all non-command bytes as individual characters
+				self.charMode = true
+			elseif cmd == 0xfc then
+				-- treat all non-command bytes as string tokens
+				self.charMode = false
 			end
 		elseif cmd == 0x2f then
 			-- move down a row
@@ -135,7 +132,7 @@ CmdListRenderer =
 			isCommand, cmdPtr = self:processNextCommand(cmd, cmdPtr, false)
 
 			if isCommand == false then
-				if self.treatAsText == true then
+				if self.charMode == true then
 					self:drawFontGlyph(graphicsView, cmd - 32, x, y)
 				else
 					self:drawStringInternal(graphicsView, cmd, StringTable, x, y)
@@ -212,7 +209,7 @@ CmdListRenderer =
 
 			local addSpace = false
 			if isCommand == false then
-				if self.treatAsText == false then
+				if self.charMode == false then
 					local s = self:getString(cmd, StringTable)
 					if s ~= '' then
 						str = str .. s
@@ -287,13 +284,15 @@ CmdListRenderer =
 			elseif cmd == 0xfa then
 				SetDataItemComment(cmdPtr, "[Double Height]")
 			elseif cmd == 0xfb then
+				SetDataItemComment(cmdPtr, "[Char Mode]")
+			elseif cmd == 0xfc then
 				SetDataItemComment(cmdPtr, "[String Mode]")
 			end
 		elseif cmd == 0x2f then
 			SetDataItemComment(cmdPtr, "[New Line]")
 		else
 			-- not a command. byte will be treated as a string or character lookup
-			if self.treatAsText == false then
+			if self.charMode == false then
 				if cmd == 1 then
 					SetDataItemComment(cmdPtr, "{Emblem Graphic}")
 				else
@@ -326,8 +325,9 @@ CmdListRenderer =
 	end,
 }
 
--- Find and optionally display all calls to draw command lists in the machine's RAM
-function FindCmdListCalls(doubleHeight, display)
+-- Find and optionally display all calls to draw command lists in the machine's RAM. 
+-- Also optionally adds comments to code.
+function FindCmdListCalls(doubleHeight, display, addComment)
 	-- 3e NN 		LD NN
 	-- cd XX XX		CALL XXXX
 	local funcAddr
@@ -354,16 +354,19 @@ function FindCmdListCalls(doubleHeight, display)
 						imgui.Text("Unknown cmd list at ")
 					else
 						imgui.Text("Cmd list " .. tostring(cmdIndex) .. " at ")
-						--if addComment then
-						--	SetDataItemComment(curPtr, "TEST")
-						--end
 					end
 					DrawAddressLabel(curPtr)
 					if cmdIndex ~= nil then 
 						imgui.SameLine(500)
-						imgui.Text("'" .. CmdListRenderer:getTextSummary(cmdIndex, doubleHeight) .. "'") 
+						local summary = CmdListRenderer:getTextSummary(cmdIndex, doubleHeight)
+						imgui.Text("'" .. summary .. "'") 
 					end
-				else
+				elseif addComment then
+					if cmdIndex ~= nil then 
+						local summary = CmdListRenderer:getTextSummary(cmdIndex, doubleHeight)
+						SetCodeItemComment(curPtr, summary)
+					end
+				else 
 					if cmdIndex ~= nil then
 						CmdListIsDoubleHeight[cmdIndex] = doubleHeight
 					end
@@ -390,8 +393,10 @@ CommandListViewer =
 		SetColourFonts(self.colourFonts)
 		CmdListRenderer:drawString(self.graphicsView, self.stringNum, StringTable, 0, 0)
 		CmdListRenderer:render(self.graphicsView, self.cmdListNum, 0, 64, false, 0)
-		FindCmdListCalls(false, false)
-		FindCmdListCalls(true, false)
+		
+		-- identify which command lists are double height by looking at code usage
+		FindCmdListCalls(false, false, false)
+		FindCmdListCalls(true, false, false)
 	end,
 
 	onDrawUI = function(self)
@@ -439,8 +444,7 @@ CommandListViewer =
 			DrawAddressLabel(CurDrawListCmd)
 		end
 
-		if changedcmdListNum or changedNumBytes or changedStringNum or dblHeightchanged or colourFontsChanged then
-			
+		if changedcmdListNum or changedNumBytes or changedStringNum or dblHeightchanged or colourFontsChanged then		
 			if dblHeightchanged == false then
 				if CmdListIsDoubleHeight[self.cmdListNum] == nil then
 					self.doubleHeight = false
@@ -459,11 +463,10 @@ CommandListViewer =
 			CmdListRenderer:addDataComments(self.cmdListNum, self.doubleHeight)
 		end
 
-
 		-- Update and draw to screen
 		DrawGraphicsView(self.graphicsView)
 		
-		if imgui.Button("Clear All Comments") then
+		if imgui.Button("Clear All Data Comments") then
 			local curPtr = CommandListTable
 			while curPtr < StringTable do
 				SetDataItemComment(curPtr, "")
@@ -471,14 +474,25 @@ CommandListViewer =
 			end
 		end
 
+		if imgui.Button("Set All Code Comments") then
+			FindCmdListCalls(false, false, true)
+			FindCmdListCalls(true, false, true)
+		end
+
+		if imgui.Button("Set All Data Comments") then
+			for c = 1, CmdListMaxIndex do
+				CmdListRenderer:addDataComments(c, CmdListIsDoubleHeight[c])
+			end 
+		end
+
 		local drawCallsChanged = false
 		drawCallsChanged, self.drawCalls = imgui.Checkbox("Show Draw Calls", self.drawCalls)
 
 		if self.drawCalls == true then
 			imgui.Text("Cmd List calls:")
-			FindCmdListCalls(false, true)
+			FindCmdListCalls(false, true, false)
 			imgui.Text("\nCmd List double height calls:")
-			FindCmdListCalls(true, true)
+			FindCmdListCalls(true, true, false)
 		end
 	end,
 
