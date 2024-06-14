@@ -16,7 +16,9 @@ To open the disassembly you need to download or build the Spectrum Analyser tool
   - Select `LaserSquad_Scenario1`
 
 \*   The workspace root is the folder `WorkspaceRoot` points to in the `GlobalConfig.json` file.
+
 \**  The snapshot folder is the folder `SnapshotFolder` points to in the `GlobalConfig.json` file.
+
 \*** You will need to run Spectrum Analyser once to create `GlobalConfig.json`
 
 Note: the GlobalConfig.json file will be created the first time you run Spectrum Analyser
