@@ -10,13 +10,14 @@ To open the disassembly you need to download or build the Spectrum Analyser tool
   - Or download a pre-built version: https://colourclash.co.uk/spectrum-analyser/
   - Copy the `LaserSquad_Scenario1` folder from `SpectrumAnalyserProjects` to your workspace root.* 
   - Copy the `LaserSquad_Scenario1.z80` to your snapshot folder.**
+  - Set `"EnableLua"` to `true` in `GlobalConfig.json`***
   - Start Spectrum Analyser
   - Select the `Open Game` option in the `File` menu
   - Select `LaserSquad_Scenario1`
 
 \*   The workspace root is the folder `WorkspaceRoot` points to in the `GlobalConfig.json` file.
-
 \**  The snapshot folder is the folder `SnapshotFolder` points to in the `GlobalConfig.json` file.
+\*** You will need to run Spectrum Analyser once to create `GlobalConfig.json`
 
 Note: the GlobalConfig.json file will be created the first time you run Spectrum Analyser
 
