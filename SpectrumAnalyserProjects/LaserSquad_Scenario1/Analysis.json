@@ -37,8 +37,10 @@
         {
             "AddressRef": 3602841604,
             "CharacterSetRef": 65535,
+            "FlagSet": -1,
             "Height": 50,
             "IgnoreCharacter": 0,
+            "Stride": 80,
             "Width": 80
         }
     ],
@@ -50,7 +52,1661 @@
             "ColourInfo": 0,
             "Dynamic": false,
             "MaskInfo": 0,
+            "Name": "font8x8_0",
             "PaletteNo": -1
+        }
+    ],
+    "DataTypes": {
+        "Enums": null,
+        "Flags": null,
+        "NextItemId": 0,
+        "Structs": null
+    },
+    "FunctionInfo": [
+        {
+            "Description": "",
+            "EndAddress": 1581252610,
+            "StartAddress": 1581252610,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1604780034,
+            "StartAddress": 1604780034,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1605632002,
+            "StartAddress": 1605632002,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1610481666,
+            "StartAddress": 1610481666,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1613496322,
+            "StartAddress": 1613496322,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1613561858,
+            "StartAddress": 1613561858,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1618083842,
+            "StartAddress": 1618083842,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1622081538,
+            "StartAddress": 1622081538,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1627848706,
+            "StartAddress": 1627848706,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1628569602,
+            "StartAddress": 1628569602,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1630142466,
+            "StartAddress": 1630142466,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1634598914,
+            "StartAddress": 1634598914,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1640169474,
+            "StartAddress": 1640169474,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1645543426,
+            "StartAddress": 1645543426,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1648623618,
+            "StartAddress": 1648623618,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1649344514,
+            "StartAddress": 1649344514,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1652948994,
+            "StartAddress": 1652948994,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1654915074,
+            "StartAddress": 1654915074,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1658454018,
+            "StartAddress": 1658454018,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1658781698,
+            "StartAddress": 1658781698,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1659109378,
+            "StartAddress": 1659109378,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1659437058,
+            "StartAddress": 1659437058,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1660289026,
+            "StartAddress": 1660289026,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1661009922,
+            "StartAddress": 1661009922,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1663893506,
+            "StartAddress": 1663893506,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1664483330,
+            "StartAddress": 1664483330,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1665073154,
+            "StartAddress": 1665073154,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1665662978,
+            "StartAddress": 1665662978,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1666252802,
+            "StartAddress": 1666252802,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1666973698,
+            "StartAddress": 1666973698,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1669332994,
+            "StartAddress": 1669332994,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1671430146,
+            "StartAddress": 1671430146,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1673527298,
+            "StartAddress": 1673527298,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1675755522,
+            "StartAddress": 1675755522,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1678376962,
+            "StartAddress": 1678376962,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1681260546,
+            "StartAddress": 1681260546,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1682571266,
+            "StartAddress": 1682571266,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1683357698,
+            "StartAddress": 1683357698,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1693908994,
+            "StartAddress": 1693908994,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1700200450,
+            "StartAddress": 1700200450,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1709637634,
+            "StartAddress": 1709637634,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1711013890,
+            "StartAddress": 1711013890,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1712783362,
+            "StartAddress": 1712783362,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1715404802,
+            "StartAddress": 1715404802,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1724973058,
+            "StartAddress": 1724973058,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1727528962,
+            "StartAddress": 1727528962,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1730871298,
+            "StartAddress": 1730871298,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1732378626,
+            "StartAddress": 1732378626,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1732509698,
+            "StartAddress": 1732509698,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1733033986,
+            "StartAddress": 1733033986,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1734213634,
+            "StartAddress": 1734213634,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1735131138,
+            "StartAddress": 1735131138,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1736769538,
+            "StartAddress": 1736769538,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1740767234,
+            "StartAddress": 1740767234,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1742667778,
+            "StartAddress": 1742667778,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1744240642,
+            "StartAddress": 1744240642,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1746403330,
+            "StartAddress": 1746403330,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1753939970,
+            "StartAddress": 1753939970,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1755316226,
+            "StartAddress": 1755316226,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1757675522,
+            "StartAddress": 1757675522,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1763180546,
+            "StartAddress": 1763180546,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1766719490,
+            "StartAddress": 1766719490,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1775042562,
+            "StartAddress": 1775042562,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1775435778,
+            "StartAddress": 1775435778,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1777205250,
+            "StartAddress": 1777205250,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1779433474,
+            "StartAddress": 1779433474,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1780416514,
+            "StartAddress": 1780416514,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1785528322,
+            "StartAddress": 1785528322,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1787494402,
+            "StartAddress": 1787494402,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1795686402,
+            "StartAddress": 1795686402,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1796800514,
+            "StartAddress": 1796800514,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1797849090,
+            "StartAddress": 1797849090,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1798766594,
+            "StartAddress": 1798766594,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1800011778,
+            "StartAddress": 1800011778,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1803157506,
+            "StartAddress": 1803157506,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1804795906,
+            "StartAddress": 1804795906,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1807482882,
+            "StartAddress": 1807482882,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1814691842,
+            "StartAddress": 1814691842,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1827209218,
+            "StartAddress": 1827209218,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1829765122,
+            "StartAddress": 1829765122,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1833828354,
+            "StartAddress": 1833828354,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1835794434,
+            "StartAddress": 1835794434,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1837891586,
+            "StartAddress": 1837891586,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1846345730,
+            "StartAddress": 1846345730,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1846542338,
+            "StartAddress": 1846542338,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1846738946,
+            "StartAddress": 1846738946,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1853095938,
+            "StartAddress": 1853095938,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1858011138,
+            "StartAddress": 1858011138,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1882128386,
+            "StartAddress": 1882128386,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1890779138,
+            "StartAddress": 1890779138,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1892286466,
+            "StartAddress": 1892286466,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1902641154,
+            "StartAddress": 1902641154,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1906835458,
+            "StartAddress": 1906835458,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1909915650,
+            "StartAddress": 1909915650,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1912668162,
+            "StartAddress": 1912668162,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1913192450,
+            "StartAddress": 1913192450,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1919549442,
+            "StartAddress": 1919549442,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1921187842,
+            "StartAddress": 1921187842,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1922564098,
+            "StartAddress": 1922564098,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1931870210,
+            "StartAddress": 1931870210,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1939734530,
+            "StartAddress": 1939734530,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1942224898,
+            "StartAddress": 1942224898,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1945305090,
+            "StartAddress": 1945305090,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1948385282,
+            "StartAddress": 1948385282,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1955069954,
+            "StartAddress": 1955069954,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1958805506,
+            "StartAddress": 1958805506,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1960968194,
+            "StartAddress": 1960968194,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1962868738,
+            "StartAddress": 1962868738,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 1969029122,
+            "StartAddress": 1969029122,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2001141762,
+            "StartAddress": 2001141762,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2005532674,
+            "StartAddress": 2005532674,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2012020738,
+            "StartAddress": 2012020738,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2012676098,
+            "StartAddress": 2012676098,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2014380034,
+            "StartAddress": 2014380034,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2016411650,
+            "StartAddress": 2016411650,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2019360770,
+            "StartAddress": 2019360770,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2025979906,
+            "StartAddress": 2025979906,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2059993090,
+            "StartAddress": 2059993090,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2073362434,
+            "StartAddress": 2073362434,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2078146562,
+            "StartAddress": 2078146562,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2078736386,
+            "StartAddress": 2078736386,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2079719426,
+            "StartAddress": 2079719426,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2080702466,
+            "StartAddress": 2080702466,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2107572226,
+            "StartAddress": 2107572226,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2114650114,
+            "StartAddress": 2114650114,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2118647810,
+            "StartAddress": 2118647810,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2123497474,
+            "StartAddress": 2123497474,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2127233026,
+            "StartAddress": 2127233026,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2139357186,
+            "StartAddress": 2139357186,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2140667906,
+            "StartAddress": 2140667906,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2143354882,
+            "StartAddress": 2143354882,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2157248515,
+            "StartAddress": 2157248515,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2159083523,
+            "StartAddress": 2159083523,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2174877699,
+            "StartAddress": 2174877699,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2180710403,
+            "StartAddress": 2180710403,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2191392771,
+            "StartAddress": 2191392771,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2196307971,
+            "StartAddress": 2196307971,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2197618691,
+            "StartAddress": 2197618691,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2198536195,
+            "StartAddress": 2198536195,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2201419779,
+            "StartAddress": 2201419779,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2204106755,
+            "StartAddress": 2204106755,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2205220867,
+            "StartAddress": 2205220867,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2208694275,
+            "StartAddress": 2208694275,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2219573251,
+            "StartAddress": 2219573251,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2244804611,
+            "StartAddress": 2244804611,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2263089155,
+            "StartAddress": 2263089155,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2269970435,
+            "StartAddress": 2269970435,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2290155523,
+            "StartAddress": 2290155523,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2291138563,
+            "StartAddress": 2291138563,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2303393795,
+            "StartAddress": 2303393795,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2304704515,
+            "StartAddress": 2304704515,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2310078467,
+            "StartAddress": 2310078467,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2320826371,
+            "StartAddress": 2320826371,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2340028419,
+            "StartAddress": 2340028419,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2342977539,
+            "StartAddress": 2342977539,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2351235075,
+            "StartAddress": 2351235075,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2354315267,
+            "StartAddress": 2354315267,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2357002243,
+            "StartAddress": 2357002243,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2373451779,
+            "StartAddress": 2373451779,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2373910531,
+            "StartAddress": 2373910531,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2380333059,
+            "StartAddress": 2380333059,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2411921411,
+            "StartAddress": 2411921411,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2413953027,
+            "StartAddress": 2413953027,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2415132675,
+            "StartAddress": 2415132675,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2415984643,
+            "StartAddress": 2415984643,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2417033219,
+            "StartAddress": 2417033219,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2420310019,
+            "StartAddress": 2420310019,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2430861315,
+            "StartAddress": 2430861315,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2445148163,
+            "StartAddress": 2445148163,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2472542211,
+            "StartAddress": 2472542211,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2486894595,
+            "StartAddress": 2486894595,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2488401923,
+            "StartAddress": 2488401923,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2580480003,
+            "StartAddress": 2580480003,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2585133059,
+            "StartAddress": 2585133059,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2588344323,
+            "StartAddress": 2588344323,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2617966595,
+            "StartAddress": 2617966595,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2626355203,
+            "StartAddress": 2626355203,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2639593475,
+            "StartAddress": 2639593475,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2653356035,
+            "StartAddress": 2653356035,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2656043011,
+            "StartAddress": 2656043011,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2668560387,
+            "StartAddress": 2668560387,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2673737731,
+            "StartAddress": 2673737731,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2682257411,
+            "StartAddress": 2682257411,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2688024579,
+            "StartAddress": 2688024579,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2690908163,
+            "StartAddress": 2690908163,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2694447107,
+            "StartAddress": 2694447107,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2695495683,
+            "StartAddress": 2695495683,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2698838019,
+            "StartAddress": 2698838019,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2699952131,
+            "StartAddress": 2699952131,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2713124867,
+            "StartAddress": 2713124867,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2714173443,
+            "StartAddress": 2714173443,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2719023107,
+            "StartAddress": 2719023107,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2725183491,
+            "StartAddress": 2725183491,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2725642243,
+            "StartAddress": 2725642243,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2730098691,
+            "StartAddress": 2730098691,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2733506563,
+            "StartAddress": 2733506563,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2742026243,
+            "StartAddress": 2742026243,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2759065603,
+            "StartAddress": 2759065603,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2762211331,
+            "StartAddress": 2762211331,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2772041731,
+            "StartAddress": 2772041731,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2773483523,
+            "StartAddress": 2773483523,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2776236035,
+            "StartAddress": 2776236035,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2782920707,
+            "StartAddress": 2782920707,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2964127747,
+            "StartAddress": 2964127747,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2965897219,
+            "StartAddress": 2965897219,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2973106179,
+            "StartAddress": 2973106179,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2975596547,
+            "StartAddress": 2975596547,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2979594243,
+            "StartAddress": 2979594243,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2980052995,
+            "StartAddress": 2980052995,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 2985754627,
+            "StartAddress": 2985754627,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3049127939,
+            "StartAddress": 3049127939,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3050635267,
+            "StartAddress": 3050635267,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3056009219,
+            "StartAddress": 3056009219,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3056205827,
+            "StartAddress": 3056205827,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3056795651,
+            "StartAddress": 3056795651,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3073507331,
+            "StartAddress": 3073507331,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3078094851,
+            "StartAddress": 3078094851,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3079405571,
+            "StartAddress": 3079405571,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3091136515,
+            "StartAddress": 3091136515,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3092381699,
+            "StartAddress": 3092381699,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3095199747,
+            "StartAddress": 3095199747,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3126591491,
+            "StartAddress": 3126591491,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3129475075,
+            "StartAddress": 3129475075,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3132162051,
+            "StartAddress": 3132162051,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3156279299,
+            "StartAddress": 3156279299,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3161194499,
+            "StartAddress": 3161194499,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3163291651,
+            "StartAddress": 3163291651,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3164602371,
+            "StartAddress": 3164602371,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3174760451,
+            "StartAddress": 3174760451,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3177185283,
+            "StartAddress": 3177185283,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3182231555,
+            "StartAddress": 3182231555,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3185049603,
+            "StartAddress": 3185049603,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3218079747,
+            "StartAddress": 3218079747,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3235774468,
+            "StartAddress": 3235774468,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
+            "EndAddress": 3246325764,
+            "StartAddress": 3246325764,
+            "bManualEdit": false,
+            "bROMFunction": false
         }
     ],
     "Pages": [
@@ -65,6 +1721,7 @@
             "LabelInfo": [
                 {
                     "Address": 0,
+                    "Global": true,
                     "LabelType": 0,
                     "Name": "ScreenPixels"
                 }
@@ -91,7 +1748,9 @@
                 {
                     "Address": 772,
                     "ByteSize": 1,
-                    "OperandType": 1
+                    "Flags": 2,
+                    "OperandType": 1,
+                    "SMC": true
                 },
                 {
                     "Address": 775,
@@ -263,6 +1922,11 @@
                     "DataType": 10
                 },
                 {
+                    "Address": 772,
+                    "DataType": 11,
+                    "InstructionAddressRef": 1526988802
+                },
+                {
                     "Address": 773,
                     "DataType": 11,
                     "InstructionAddressRef": 1526988802
@@ -296,6 +1960,7 @@
             "LabelInfo": [
                 {
                     "Address": 0,
+                    "Global": true,
                     "LabelType": 0,
                     "Name": "ScreenAttributes"
                 },
@@ -1411,7 +3076,6 @@
                 {
                     "Address": 527,
                     "ByteSize": 2,
-                    "Comment": "save screen write address",
                     "DataType": 2
                 },
                 {
@@ -1432,7 +3096,6 @@
                 {
                     "Address": 535,
                     "ByteSize": 2,
-                    "Comment": "save screen write address",
                     "DataType": 2
                 },
                 {
@@ -1458,16 +3121,19 @@
                 {
                     "Address": 545,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 547,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 549,
                     "ByteSize": 2,
+                    "Comment": "draw 8x8 character",
                     "DataType": 2
                 },
                 {
@@ -1498,7 +3164,6 @@
                 {
                     "Address": 561,
                     "ByteSize": 2,
-                    "Comment": "draw the text",
                     "DataType": 2
                 },
                 {
@@ -2861,16 +4526,19 @@
                 },
                 {
                     "Address": 935,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_5FA7"
                 },
                 {
                     "Address": 948,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_5FB4"
                 },
                 {
                     "Address": 1022,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_5FFE"
                 }
@@ -5281,6 +6949,10 @@
                     "Comment": "Think #REG:A# holds tile index\n"
                 },
                 {
+                    "Address": 687,
+                    "Comment": "We get here every time the cursor lands on a new map tile."
+                },
+                {
                     "Address": 869,
                     "Comment": "if we get here we need to scroll the screen\n"
                 },
@@ -5295,6 +6967,10 @@
                 {
                     "Address": 969,
                     "Comment": "if we get here we need to scroll the screen down\n"
+                },
+                {
+                    "Address": 1000,
+                    "Comment": "If we get here the cursor has moved to the edge of the screen and we need to scroll the screen."
                 }
             ],
             "DataInfo": [
@@ -5446,6 +7122,7 @@
             "LabelInfo": [
                 {
                     "Address": 44,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "ClearScreenWithBlack"
                 },
@@ -5463,6 +7140,7 @@
                 },
                 {
                     "Address": 114,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "DrawFontGlyph"
                 },
@@ -5474,11 +7152,13 @@
                 {
                     "Address": 175,
                     "Comment": " A holds index of tile to draw",
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "maybeDraw16x16Tile"
                 },
                 {
                     "Address": 263,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "WriteCharPixelsToScreen"
                 },
@@ -5489,6 +7169,7 @@
                 },
                 {
                     "Address": 274,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "InputEReturnHL_CharMapRelated_6112"
                 },
@@ -5499,6 +7180,7 @@
                 },
                 {
                     "Address": 298,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_612A"
                 },
@@ -5514,6 +7196,7 @@
                 },
                 {
                     "Address": 366,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "DrawTile"
                 },
@@ -5534,8 +7217,9 @@
                 },
                 {
                     "Address": 451,
+                    "Global": true,
                     "LabelType": 1,
-                    "Name": "function_61C3"
+                    "Name": "maybeMainLoopFunc_61C3"
                 },
                 {
                     "Address": 455,
@@ -5564,6 +7248,7 @@
                 },
                 {
                     "Address": 533,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6215"
                 },
@@ -5584,11 +7269,13 @@
                 },
                 {
                     "Address": 580,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6244"
                 },
                 {
                     "Address": 591,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_624F"
                 },
@@ -5599,6 +7286,7 @@
                 },
                 {
                     "Address": 646,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6286"
                 },
@@ -5614,6 +7302,7 @@
                 },
                 {
                     "Address": 676,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_62A4"
                 },
@@ -5634,21 +7323,25 @@
                 },
                 {
                     "Address": 730,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_62DA"
                 },
                 {
                     "Address": 735,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_62DF"
                 },
                 {
                     "Address": 740,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_62E4"
                 },
                 {
                     "Address": 745,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_62E9"
                 },
@@ -5664,36 +7357,43 @@
                 },
                 {
                     "Address": 758,
+                    "Global": true,
                     "LabelType": 1,
-                    "Name": "function_62F6"
+                    "Name": "MapCursorMovementRelated"
                 },
                 {
                     "Address": 769,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "UpdateMapCursorMovement"
                 },
                 {
                     "Address": 813,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "UpWasPressed"
                 },
                 {
                     "Address": 822,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "DownWasPressed"
                 },
                 {
                     "Address": 831,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "RightWasPressed"
                 },
                 {
                     "Address": 840,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "LeftWasPressed"
                 },
                 {
                     "Address": 849,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "SetCursorMoving"
                 },
@@ -5705,6 +7405,7 @@
                 },
                 {
                     "Address": 860,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "MoveCursorRight"
                 },
@@ -5720,6 +7421,7 @@
                 },
                 {
                     "Address": 896,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "MoveCursorLeft"
                 },
@@ -5730,6 +7432,7 @@
                 },
                 {
                     "Address": 928,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "MoveCursorUp"
                 },
@@ -5740,6 +7443,7 @@
                 },
                 {
                     "Address": 960,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "MoveCursorDown"
                 },
@@ -5750,8 +7454,9 @@
                 },
                 {
                     "Address": 994,
+                    "Global": true,
                     "LabelType": 1,
-                    "Name": "function_63E2"
+                    "Name": "functionRelatedToCursorMovement_63E2"
                 },
                 {
                     "Address": 1011,
@@ -8220,21 +9925,25 @@
                 },
                 {
                     "Address": 10,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_640A"
                 },
                 {
                     "Address": 54,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "maybeDrawCursor"
                 },
                 {
                     "Address": 74,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_644A"
                 },
                 {
                     "Address": 86,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6456"
                 },
@@ -8270,6 +9979,7 @@
                 },
                 {
                     "Address": 247,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "maybeStringLookupRelated_64f7"
                 },
@@ -8290,6 +10000,7 @@
                 },
                 {
                     "Address": 343,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "drawTextRelated"
                 },
@@ -8350,6 +10061,7 @@
                 },
                 {
                     "Address": 487,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "DrawFontGlyphCommand"
                 },
@@ -8360,6 +10072,7 @@
                 },
                 {
                     "Address": 508,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "UpdateDrawCursor"
                 },
@@ -8370,6 +10083,7 @@
                 },
                 {
                     "Address": 535,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "TextRelated_ProcessSlashCommand_6617"
                 },
@@ -8385,6 +10099,7 @@
                 },
                 {
                     "Address": 575,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "ProcessDrawCommand"
                 },
@@ -8455,6 +10170,7 @@
                 },
                 {
                     "Address": 721,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_66D1"
                 },
@@ -8470,6 +10186,7 @@
                 },
                 {
                     "Address": 760,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_66F8"
                 },
@@ -8500,6 +10217,7 @@
                 },
                 {
                     "Address": 811,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_672B"
                 },
@@ -8515,16 +10233,19 @@
                 },
                 {
                     "Address": 834,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6742"
                 },
                 {
                     "Address": 836,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6744"
                 },
                 {
                     "Address": 844,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_674C"
                 },
@@ -8535,11 +10256,13 @@
                 },
                 {
                     "Address": 862,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "DrawCommandList_DblHeight"
                 },
                 {
                     "Address": 876,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "DrawCommandList"
                 },
@@ -8550,21 +10273,25 @@
                 },
                 {
                     "Address": 901,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6785"
                 },
                 {
                     "Address": 962,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_67C2"
                 },
                 {
                     "Address": 991,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_67DF"
                 },
                 {
                     "Address": 1015,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_67F7"
                 }
@@ -10550,6 +12277,7 @@
                 },
                 {
                     "Address": 24,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6818"
                 },
@@ -10575,16 +12303,19 @@
                 },
                 {
                     "Address": 139,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_688B"
                 },
                 {
                     "Address": 160,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_68A0"
                 },
                 {
                     "Address": 196,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_68C4"
                 },
@@ -10620,6 +12351,7 @@
                 },
                 {
                     "Address": 280,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6918"
                 },
@@ -10640,6 +12372,7 @@
                 },
                 {
                     "Address": 334,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_694E"
                 },
@@ -10660,11 +12393,13 @@
                 },
                 {
                     "Address": 461,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_69CD"
                 },
                 {
                     "Address": 467,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_69D3"
                 },
@@ -10675,21 +12410,25 @@
                 },
                 {
                     "Address": 494,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_69EE"
                 },
                 {
                     "Address": 528,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6A10"
                 },
                 {
                     "Address": 543,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6A1F"
                 },
                 {
                     "Address": 621,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6A6D"
                 },
@@ -10705,16 +12444,19 @@
                 },
                 {
                     "Address": 651,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6A8B"
                 },
                 {
                     "Address": 776,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6B08"
                 },
                 {
                     "Address": 793,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6B19"
                 },
@@ -10730,16 +12472,19 @@
                 },
                 {
                     "Address": 809,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6B29"
                 },
                 {
                     "Address": 823,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6B37"
                 },
                 {
                     "Address": 842,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6B4A"
                 },
@@ -10755,16 +12500,19 @@
                 },
                 {
                     "Address": 890,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6B7A"
                 },
                 {
                     "Address": 915,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6B93"
                 },
                 {
                     "Address": 956,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6BBC"
                 },
@@ -12693,6 +14441,7 @@
                 },
                 {
                     "Address": 42,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6C2A"
                 },
@@ -12723,6 +14472,7 @@
                 },
                 {
                     "Address": 233,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6CE9"
                 },
@@ -12733,6 +14483,7 @@
                 },
                 {
                     "Address": 272,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6D10"
                 },
@@ -12749,6 +14500,7 @@
                 },
                 {
                     "Address": 334,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6D4E"
                 },
@@ -12759,11 +14511,13 @@
                 },
                 {
                     "Address": 364,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6D6C"
                 },
                 {
                     "Address": 396,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6D8C"
                 },
@@ -12814,16 +14568,19 @@
                 },
                 {
                     "Address": 525,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6E0D"
                 },
                 {
                     "Address": 528,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6E10"
                 },
                 {
                     "Address": 531,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6E13"
                 },
@@ -12864,6 +14621,7 @@
                 },
                 {
                     "Address": 628,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6E74"
                 },
@@ -12874,6 +14632,7 @@
                 },
                 {
                     "Address": 703,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_6EBF"
                 },
@@ -14750,6 +16509,7 @@
                 },
                 {
                     "Address": 47,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_702F"
                 },
@@ -14898,11 +16658,13 @@
                 },
                 {
                     "Address": 179,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_70B3"
                 },
                 {
                     "Address": 202,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_70CA"
                 },
@@ -14938,6 +16700,7 @@
                 },
                 {
                     "Address": 360,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7168"
                 },
@@ -14948,6 +16711,7 @@
                 },
                 {
                     "Address": 424,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_71A8"
                 },
@@ -14963,6 +16727,7 @@
                 },
                 {
                     "Address": 471,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_71D7"
                 },
@@ -14978,11 +16743,13 @@
                 },
                 {
                     "Address": 513,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7201"
                 },
                 {
                     "Address": 521,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7209"
                 },
@@ -15003,16 +16770,19 @@
                 },
                 {
                     "Address": 618,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_726A"
                 },
                 {
                     "Address": 643,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7283"
                 },
                 {
                     "Address": 664,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7298"
                 },
@@ -15033,6 +16803,7 @@
                 },
                 {
                     "Address": 806,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7326"
                 },
@@ -15053,6 +16824,7 @@
                 },
                 {
                     "Address": 926,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_739E"
                 },
@@ -15068,6 +16840,7 @@
                 },
                 {
                     "Address": 964,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_73C4"
                 },
@@ -15088,6 +16861,7 @@
                 },
                 {
                     "Address": 1011,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_73F3"
                 }
@@ -17112,6 +18886,7 @@
                 },
                 {
                     "Address": 34,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7422"
                 },
@@ -17127,6 +18902,7 @@
                 },
                 {
                     "Address": 136,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7488"
                 },
@@ -17142,11 +18918,13 @@
                 },
                 {
                     "Address": 193,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "unknownFunctionThatUsesAandIX_74C1"
                 },
                 {
                     "Address": 226,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_74E2"
                 },
@@ -17168,6 +18946,7 @@
                 },
                 {
                     "Address": 255,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_74FF"
                 },
@@ -17183,6 +18962,7 @@
                 },
                 {
                     "Address": 349,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_755D"
                 },
@@ -17228,6 +19008,7 @@
                 },
                 {
                     "Address": 839,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7747"
                 },
@@ -17243,6 +19024,7 @@
                 },
                 {
                     "Address": 906,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_778A"
                 },
@@ -17263,11 +19045,13 @@
                 },
                 {
                     "Address": 1005,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_77ED"
                 },
                 {
                     "Address": 1015,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_77F7"
                 },
@@ -18885,11 +20669,13 @@
             "LabelInfo": [
                 {
                     "Address": 17,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7811"
                 },
                 {
                     "Address": 48,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7830"
                 },
@@ -18905,6 +20691,7 @@
                 },
                 {
                     "Address": 93,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_785D"
                 },
@@ -18920,6 +20707,7 @@
                 },
                 {
                     "Address": 194,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_78C2"
                 },
@@ -18975,6 +20763,7 @@
                 },
                 {
                     "Address": 713,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7AC9"
                 },
@@ -19000,6 +20789,7 @@
                 },
                 {
                     "Address": 917,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7B95"
                 },
@@ -19025,16 +20815,19 @@
                 },
                 {
                     "Address": 990,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7BDE"
                 },
                 {
                     "Address": 999,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7BE7"
                 },
                 {
                     "Address": 1014,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7BF6"
                 }
@@ -20458,6 +22251,7 @@
             "LabelInfo": [
                 {
                     "Address": 5,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7C05"
                 },
@@ -20498,6 +22292,7 @@
                 },
                 {
                     "Address": 415,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7D9F"
                 },
@@ -20513,6 +22308,7 @@
                 },
                 {
                     "Address": 523,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7E0B"
                 },
@@ -20528,11 +22324,13 @@
                 },
                 {
                     "Address": 584,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7E48"
                 },
                 {
                     "Address": 658,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7E92"
                 },
@@ -20543,6 +22341,7 @@
                 },
                 {
                     "Address": 715,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7ECB"
                 },
@@ -20573,11 +22372,13 @@
                 },
                 {
                     "Address": 900,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7F84"
                 },
                 {
                     "Address": 920,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7F98"
                 },
@@ -20593,6 +22394,7 @@
                 },
                 {
                     "Address": 961,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_7FC1"
                 }
@@ -22397,11 +24199,13 @@
             "LabelInfo": [
                 {
                     "Address": 149,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8095"
                 },
                 {
                     "Address": 177,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_80B1"
                 },
@@ -22452,6 +24256,7 @@
                 },
                 {
                     "Address": 418,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_81A2"
                 },
@@ -22467,6 +24272,7 @@
                 },
                 {
                     "Address": 507,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_81FB"
                 },
@@ -22487,6 +24293,7 @@
                 },
                 {
                     "Address": 670,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_829E"
                 },
@@ -22507,6 +24314,7 @@
                 },
                 {
                     "Address": 745,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_82E9"
                 },
@@ -22522,6 +24330,7 @@
                 },
                 {
                     "Address": 765,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_82FD"
                 },
@@ -22532,6 +24341,7 @@
                 },
                 {
                     "Address": 779,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_830B"
                 },
@@ -22547,6 +24357,7 @@
                 },
                 {
                     "Address": 823,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8337"
                 },
@@ -22562,11 +24373,13 @@
                 },
                 {
                     "Address": 864,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8360"
                 },
                 {
                     "Address": 881,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8371"
                 },
@@ -22577,6 +24390,7 @@
                 },
                 {
                     "Address": 934,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_83A6"
                 },
@@ -24298,8 +26112,9 @@
                 },
                 {
                     "Address": 76,
+                    "Global": true,
                     "LabelType": 1,
-                    "Name": "function_844C"
+                    "Name": "scannerRelatedFunction_844C"
                 },
                 {
                     "Address": 115,
@@ -24373,6 +26188,7 @@
                 },
                 {
                     "Address": 461,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_85CD"
                 },
@@ -24388,6 +26204,7 @@
                 },
                 {
                     "Address": 740,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_86E4"
                 },
@@ -24403,6 +26220,7 @@
                 },
                 {
                     "Address": 845,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_874D"
                 }
@@ -25428,11 +27246,13 @@
             "LabelInfo": [
                 {
                     "Address": 129,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8881"
                 },
                 {
                     "Address": 144,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8890"
                 },
@@ -25473,6 +27293,7 @@
                 },
                 {
                     "Address": 331,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_894B"
                 },
@@ -25483,21 +27304,25 @@
                 },
                 {
                     "Address": 351,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_895F"
                 },
                 {
                     "Address": 433,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_89B1"
                 },
                 {
                     "Address": 597,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8A55"
                 },
                 {
                     "Address": 890,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8B7A"
                 },
@@ -25508,6 +27333,7 @@
                 },
                 {
                     "Address": 935,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8BA7"
                 },
@@ -27599,16 +29425,19 @@
                 },
                 {
                     "Address": 37,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8C25"
                 },
                 {
                     "Address": 84,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8C54"
                 },
                 {
                     "Address": 125,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8C7D"
                 },
@@ -27624,11 +29453,13 @@
                 },
                 {
                     "Address": 376,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8D78"
                 },
                 {
                     "Address": 383,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8D7F"
                 },
@@ -27649,6 +29480,7 @@
                 },
                 {
                     "Address": 481,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8DE1"
                 },
@@ -27724,6 +29556,7 @@
                 },
                 {
                     "Address": 963,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8FC3"
                 },
@@ -27734,11 +29567,13 @@
                 },
                 {
                     "Address": 994,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8FE2"
                 },
                 {
                     "Address": 1012,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_8FF4"
                 }
@@ -28782,16 +30617,19 @@
             "LabelInfo": [
                 {
                     "Address": 1,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9001"
                 },
                 {
                     "Address": 17,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9011"
                 },
                 {
                     "Address": 67,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9043"
                 },
@@ -28817,6 +30655,7 @@
                 },
                 {
                     "Address": 228,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_90E4"
                 },
@@ -28828,6 +30667,7 @@
                 },
                 {
                     "Address": 446,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_91BE"
                 },
@@ -28883,6 +30723,7 @@
                 },
                 {
                     "Address": 864,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9360"
                 }
@@ -29071,6 +30912,7 @@
             "LabelInfo": [
                 {
                     "Address": 59,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_943B"
                 },
@@ -29081,6 +30923,7 @@
                 },
                 {
                     "Address": 82,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9452"
                 },
@@ -30085,11 +31928,13 @@
                 },
                 {
                     "Address": 463,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_99CF"
                 },
                 {
                     "Address": 534,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9A16"
                 },
@@ -30105,6 +31950,7 @@
                 },
                 {
                     "Address": 583,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9A47"
                 },
@@ -31873,6 +33719,7 @@
             "LabelInfo": [
                 {
                     "Address": 11,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9C0B"
                 },
@@ -31883,6 +33730,7 @@
                 },
                 {
                     "Address": 139,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9C8B"
                 },
@@ -31898,6 +33746,7 @@
                 },
                 {
                     "Address": 341,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9D55"
                 },
@@ -31938,6 +33787,7 @@
                 },
                 {
                     "Address": 551,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9E27"
                 },
@@ -31948,6 +33798,7 @@
                 },
                 {
                     "Address": 592,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9E50"
                 },
@@ -31983,6 +33834,7 @@
                 },
                 {
                     "Address": 783,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9F0F"
                 },
@@ -32008,6 +33860,7 @@
                 },
                 {
                     "Address": 862,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9F5E"
                 },
@@ -32018,6 +33871,7 @@
                 },
                 {
                     "Address": 992,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_9FE0"
                 }
@@ -33808,6 +35662,7 @@
                 },
                 {
                     "Address": 56,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A038"
                 },
@@ -33823,6 +35678,7 @@
                 },
                 {
                     "Address": 100,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A064"
                 },
@@ -33833,21 +35689,25 @@
                 },
                 {
                     "Address": 154,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A09A"
                 },
                 {
                     "Address": 170,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A0AA"
                 },
                 {
                     "Address": 221,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A0DD"
                 },
                 {
                     "Address": 238,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A0EE"
                 },
@@ -33898,16 +35758,19 @@
                 },
                 {
                     "Address": 439,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A1B7"
                 },
                 {
                     "Address": 455,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A1C7"
                 },
                 {
                     "Address": 529,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A211"
                 },
@@ -33918,11 +35781,13 @@
                 },
                 {
                     "Address": 623,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A26F"
                 },
                 {
                     "Address": 630,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A276"
                 },
@@ -33958,6 +35823,7 @@
                 },
                 {
                     "Address": 698,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A2BA"
                 },
@@ -33978,6 +35844,7 @@
                 },
                 {
                     "Address": 750,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A2EE"
                 },
@@ -34004,6 +35871,7 @@
                 },
                 {
                     "Address": 880,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A370"
                 },
@@ -35429,6 +37297,7 @@
                 },
                 {
                     "Address": 116,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A474"
                 },
@@ -35459,6 +37328,7 @@
                 },
                 {
                     "Address": 164,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A4A4"
                 },
@@ -35509,6 +37379,7 @@
                 },
                 {
                     "Address": 314,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A53A"
                 },
@@ -35549,6 +37420,7 @@
                 },
                 {
                     "Address": 336,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A550"
                 },
@@ -35575,6 +37447,7 @@
                 },
                 {
                     "Address": 378,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A57A"
                 },
@@ -35629,6 +37502,7 @@
                 },
                 {
                     "Address": 480,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_A5E0"
                 },
@@ -35900,11 +37774,12 @@
                 {
                     "Address": 310,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 4
                 },
                 {
                     "Address": 313,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Read keyboard row A S D F G"
                 },
                 {
                     "Address": 315,
@@ -35924,7 +37799,8 @@
                 },
                 {
                     "Address": 321,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Read keyboard row Q W E R T"
                 },
                 {
                     "Address": 323,
@@ -35948,7 +37824,8 @@
                 },
                 {
                     "Address": 330,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Read keyboard row P O I U Y"
                 },
                 {
                     "Address": 332,
@@ -35980,7 +37857,8 @@
                 },
                 {
                     "Address": 341,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Read keyboard Space Sym M N B"
                 },
                 {
                     "Address": 343,
@@ -36493,11 +38371,39 @@
             ],
             "CommentBlocks": [
                 {
+                    "Address": 200,
+                    "Comment": "Used on main option screen 1) change controls 2) save game etc"
+                },
+                {
                     "Address": 569,
                     "Comment": "8x8 font. Used for text and some icons. Possibly the laser squad logo too.\nI guessed how many font glyphs there are. Possibly 96"
                 }
             ],
             "DataInfo": [
+                {
+                    "Address": 224,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "DisplayType": 1
+                },
+                {
+                    "Address": 226,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "DisplayType": 1
+                },
+                {
+                    "Address": 228,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "DisplayType": 1
+                },
+                {
+                    "Address": 230,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "DisplayType": 1
+                },
                 {
                     "Address": 569,
                     "DataType": 5,
@@ -39232,6 +41138,7 @@
             "LabelInfo": [
                 {
                     "Address": 173,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B0AD"
                 },
@@ -39239,12 +41146,25 @@
                     "Address": 199,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B0C7"
+                    "Name": "jumpTableIndex_b0c7"
                 },
                 {
                     "Address": 200,
+                    "Global": true,
                     "LabelType": 1,
-                    "Name": "function_B0C8"
+                    "Name": "maybeUpdateInputDevices"
+                },
+                {
+                    "Address": 224,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "InputDeviceJumpTable"
+                },
+                {
+                    "Address": 310,
+                    "Global": true,
+                    "LabelType": 1,
+                    "Name": "ReadKeyboard"
                 },
                 {
                     "Address": 347,
@@ -39254,6 +41174,7 @@
                 },
                 {
                     "Address": 348,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B15C"
                 },
@@ -39274,11 +41195,13 @@
                 },
                 {
                     "Address": 409,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B199"
                 },
                 {
                     "Address": 416,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B1A0"
                 },
@@ -39300,6 +41223,7 @@
                 },
                 {
                     "Address": 503,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B1F7"
                 },
@@ -42502,11 +44426,13 @@
                 },
                 {
                     "Address": 446,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B5BE"
                 },
                 {
                     "Address": 469,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B5D5"
                 },
@@ -42548,16 +44474,19 @@
                 },
                 {
                     "Address": 551,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B627"
                 },
                 {
                     "Address": 554,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B62A"
                 },
                 {
                     "Address": 563,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B633"
                 },
@@ -42785,6 +44714,7 @@
                 },
                 {
                     "Address": 818,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B732"
                 },
@@ -42810,6 +44740,7 @@
                 },
                 {
                     "Address": 888,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B778"
                 },
@@ -42850,6 +44781,7 @@
                 },
                 {
                     "Address": 908,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B78C"
                 },
@@ -44361,11 +46293,13 @@
                 },
                 {
                     "Address": 63,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B83F"
                 },
                 {
                     "Address": 82,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B852"
                 },
@@ -44393,6 +46327,7 @@
                 },
                 {
                     "Address": 125,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_B87D"
                 },
@@ -44464,6 +46399,7 @@
                 },
                 {
                     "Address": 604,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BA5C"
                 },
@@ -44475,6 +46411,7 @@
                 },
                 {
                     "Address": 648,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BA88"
                 },
@@ -44497,6 +46434,7 @@
                 },
                 {
                     "Address": 689,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BAB1"
                 },
@@ -45670,6 +47608,7 @@
                 },
                 {
                     "Address": 33,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BC21"
                 },
@@ -45701,6 +47640,7 @@
                 },
                 {
                     "Address": 108,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BC6C"
                 },
@@ -45726,6 +47666,7 @@
                 },
                 {
                     "Address": 140,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BC8C"
                 },
@@ -45749,6 +47690,7 @@
                 },
                 {
                     "Address": 160,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BCA0"
                 },
@@ -45806,6 +47748,7 @@
                 },
                 {
                     "Address": 315,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BD3B"
                 },
@@ -45838,6 +47781,7 @@
                 },
                 {
                     "Address": 352,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BD60"
                 },
@@ -45853,6 +47797,7 @@
                 },
                 {
                     "Address": 429,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BDAD"
                 },
@@ -45868,6 +47813,7 @@
                 },
                 {
                     "Address": 472,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BDD8"
                 },
@@ -45890,6 +47836,7 @@
                 },
                 {
                     "Address": 976,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_BFD0"
                 },
@@ -46358,6 +48305,7 @@
                 },
                 {
                     "Address": 222,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_C0DE"
                 },
@@ -46368,6 +48316,7 @@
                 },
                 {
                     "Address": 383,
+                    "Global": true,
                     "LabelType": 1,
                     "Name": "function_C17F"
                 },

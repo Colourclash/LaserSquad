@@ -1,5 +1,6 @@
 {
     "128KGame": false,
+    "AsmExportPath": "",
     "LuaSourceFiles": [
         "ZXAddresses.lua",
         "ZXUtilityFunctions.lua",
@@ -13,13 +14,13 @@
         "ViewConfigs": [
             {
                 "Enabled": true,
-                "ViewAddress": 36966,
+                "ViewAddress": 33868,
                 "ViewAddressBank": 3
             },
             {
-                "Enabled": true,
-                "ViewAddress": 45445,
-                "ViewAddressBank": 3
+                "Enabled": false,
+                "ViewAddress": 0,
+                "ViewAddressBank": -1
             },
             {
                 "Enabled": false,
@@ -33,5 +34,10 @@
             }
         ]
     },
-    "SnapshotFile": "LaserSquad_Scenario1.z80"
+    "Snapshot": {
+        "DisplayName": "LaserSquad_Scenario1",
+        "FileName": "LaserSquad_Scenario1.z80",
+        "ListName": "Snapshot File",
+        "Type": 0
+    }
 }
