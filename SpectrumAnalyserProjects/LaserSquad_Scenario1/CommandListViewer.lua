@@ -500,4 +500,4 @@ CommandListViewer =
 
 -- Initialise the template viewer
 print("Laser Squad Command List Viewer Initialised")
-AddViewer(CommandListViewer);
+AddViewer(CommandListViewer)
