@@ -380,22 +380,8 @@
         },
         {
             "Description": "",
-            "EndAddress": 1727528962,
-            "StartAddress": 1727528962,
-            "bManualEdit": false,
-            "bROMFunction": false
-        },
-        {
-            "Description": "",
             "EndAddress": 1730871298,
             "StartAddress": 1730871298,
-            "bManualEdit": false,
-            "bROMFunction": false
-        },
-        {
-            "Description": "",
-            "EndAddress": 1732378626,
-            "StartAddress": 1732378626,
             "bManualEdit": false,
             "bROMFunction": false
         },
@@ -1804,68 +1790,49 @@
                 {
                     "Address": 775,
                     "ByteSize": 1,
-                    "Flags": 2,
-                    "OperandType": 2,
-                    "SMC": true
+                    "OperandType": 2
                 },
                 {
                     "Address": 777,
-                    "ByteSize": 1,
-                    "Flags": 2,
-                    "SMC": true
+                    "ByteSize": 1
                 },
                 {
                     "Address": 778,
                     "ByteSize": 1,
-                    "Flags": 2,
-                    "OperandType": 1,
-                    "SMC": true
+                    "OperandType": 1
                 },
                 {
                     "Address": 781,
                     "ByteSize": 1,
-                    "Flags": 2,
-                    "OperandType": 2,
-                    "SMC": true
+                    "OperandType": 2
                 },
                 {
                     "Address": 783,
-                    "ByteSize": 1,
-                    "Flags": 2,
-                    "SMC": true
+                    "ByteSize": 1
                 },
                 {
                     "Address": 784,
-                    "ByteSize": 3,
-                    "Flags": 2,
-                    "SMC": true
+                    "ByteSize": 3
                 },
                 {
                     "Address": 787,
                     "ByteSize": 2,
-                    "Flags": 2,
-                    "OperandType": 2,
-                    "SMC": true
+                    "OperandType": 2
                 },
                 {
                     "Address": 789,
-                    "ByteSize": 1,
-                    "Flags": 2,
-                    "SMC": true
+                    "ByteSize": 1
                 },
                 {
                     "Address": 790,
                     "ByteSize": 3,
-                    "Flags": 2,
-                    "OperandType": 1,
-                    "SMC": true
+                    "OperandType": 1
                 },
                 {
                     "Address": 793,
                     "ByteSize": 1,
-                    "Flags": 10,
-                    "OperandType": 2,
-                    "SMC": true
+                    "Flags": 8,
+                    "OperandType": 2
                 }
             ],
             "DataInfo": [
@@ -2005,24 +1972,9 @@
                     "InstructionAddressRef": 1526988802
                 },
                 {
-                    "Address": 775,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527185410
-                },
-                {
                     "Address": 776,
                     "DataType": 11,
                     "InstructionAddressRef": 1527185410
-                },
-                {
-                    "Address": 777,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527316482
-                },
-                {
-                    "Address": 778,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527382018
                 },
                 {
                     "Address": 779,
@@ -2035,69 +1987,9 @@
                     "InstructionAddressRef": 1527382018
                 },
                 {
-                    "Address": 781,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527578626
-                },
-                {
                     "Address": 782,
                     "DataType": 11,
                     "InstructionAddressRef": 1527578626
-                },
-                {
-                    "Address": 783,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527709698
-                },
-                {
-                    "Address": 784,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527775234
-                },
-                {
-                    "Address": 785,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527775234
-                },
-                {
-                    "Address": 786,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527775234
-                },
-                {
-                    "Address": 787,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527971842
-                },
-                {
-                    "Address": 788,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1527971842
-                },
-                {
-                    "Address": 789,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1528102914
-                },
-                {
-                    "Address": 790,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1528168450
-                },
-                {
-                    "Address": 791,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1528168450
-                },
-                {
-                    "Address": 792,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1528168450
-                },
-                {
-                    "Address": 793,
-                    "DataType": 11,
-                    "InstructionAddressRef": 1528365058
                 }
             ],
             "LabelInfo": [
@@ -3111,6 +3003,10 @@
                     "Comment": "when a string is looked up, this will point to the terminating | symbol AFTER the string\n"
                 },
                 {
+                    "Address": 270,
+                    "Comment": "this points to the tile gfx of the cursor square"
+                },
+                {
                     "Address": 273,
                     "Comment": "(x,y) position of cursor.\nCursor position is in screen space and is in tile coords.\nWhen cursor is in the top left, pos is (0,0).\nWhen cursor is in the bottom right, pos is (10,10).\n"
                 },
@@ -3182,7 +3078,8 @@
                 {
                     "Address": 270,
                     "ByteSize": 2,
-                    "DataType": 2
+                    "DataType": 2,
+                    "DisplayType": 1
                 },
                 {
                     "Address": 287,
@@ -3260,26 +3157,31 @@
                 {
                     "Address": 541,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 543,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 545,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 547,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 549,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
@@ -3645,7 +3547,7 @@
                     "Address": 270,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_5D0E"
+                    "Name": "cursorTileGfxPtr"
                 },
                 {
                     "Address": 272,
@@ -7099,6 +7001,10 @@
                     "Comment": "We get here every time the cursor lands on a new map tile."
                 },
                 {
+                    "Address": 730,
+                    "Comment": "these functions are called when the user presses up and down to select number of units on squad selection screen"
+                },
+                {
                     "Address": 869,
                     "Comment": "if we get here we need to scroll the screen\n"
                 },
@@ -7471,7 +7377,7 @@
                     "Address": 730,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_62DA"
+                    "Name": "functionUsedInSquadSelect_62DA"
                 },
                 {
                     "Address": 735,
@@ -9334,7 +9240,8 @@
                 },
                 {
                     "Address": 760,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "OperandType": 7
                 },
                 {
                     "Address": 762,
@@ -9349,7 +9256,8 @@
                 },
                 {
                     "Address": 767,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "OperandType": 7
                 },
                 {
                     "Address": 769,
@@ -9494,7 +9402,8 @@
                 },
                 {
                     "Address": 828,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "OperandType": 11
                 },
                 {
                     "Address": 830,
@@ -9508,7 +9417,8 @@
                 },
                 {
                     "Address": 834,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "OperandType": 7
                 },
                 {
                     "Address": 836,
@@ -10047,6 +9957,14 @@
                     "Comment": "value is F3"
                 },
                 {
+                    "Address": 721,
+                    "Comment": "Called in squad selection screen when choosing number of units"
+                },
+                {
+                    "Address": 733,
+                    "Comment": "The user has pressed up or down to increase the number of units"
+                },
+                {
                     "Address": 862,
                     "Comment": "draw command list with double height flag set on by default"
                 }
@@ -10318,12 +10236,12 @@
                     "Address": 721,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_66D1"
+                    "Name": "updateUnitSelection"
                 },
                 {
                     "Address": 733,
                     "LabelType": 2,
-                    "Name": "label_66DD"
+                    "Name": "pressedUpDown"
                 },
                 {
                     "Address": 744,
@@ -10333,7 +10251,7 @@
                 {
                     "Address": 760,
                     "Global": true,
-                    "LabelType": 1,
+                    "LabelType": 0,
                     "Name": "function_66F8"
                 },
                 {
@@ -10365,7 +10283,7 @@
                     "Address": 811,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_672B"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_672B"
                 },
                 {
                     "Address": 813,
@@ -10380,20 +10298,20 @@
                 {
                     "Address": 834,
                     "Global": true,
-                    "LabelType": 1,
+                    "LabelType": 0,
                     "Name": "function_6742"
                 },
                 {
                     "Address": 836,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_6744"
+                    "Name": "functionUsedInSquadSelect_6744"
                 },
                 {
                     "Address": 844,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_674C"
+                    "Name": "functionUsedInSquadSelect_674C"
                 },
                 {
                     "Address": 857,
@@ -10427,13 +10345,13 @@
                     "Address": 962,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_67C2"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_67C2"
                 },
                 {
                     "Address": 991,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_67DF"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_67DF"
                 },
                 {
                     "Address": 1015,
@@ -12413,6 +12331,10 @@
                 {
                     "Address": 12,
                     "Comment": "Return\n#REG:DE# = cursor screen pos\n#REG:HL# = cursor map pos\n"
+                },
+                {
+                    "Address": 280,
+                    "Comment": "this is called on the weapon assigment stage of the equip screen when the cursor moves onto a new unit"
                 }
             ],
             "LabelInfo": [
@@ -12499,7 +12421,7 @@
                     "Address": 280,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_6918"
+                    "Name": "equipScreenNewUnitSelected_6918"
                 },
                 {
                     "Address": 292,
@@ -22467,7 +22389,7 @@
                     "Address": 523,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_7E0B"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_7E0B"
                 },
                 {
                     "Address": 540,
@@ -30762,11 +30684,81 @@
                     "OperandType": 2
                 },
                 {
+                    "Address": 827,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 830,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 833,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
                     "Address": 835,
                     "ByteSize": 2
                 },
                 {
                     "Address": 837,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 839,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 842,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 843,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 845,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 846,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 849,
+                    "ByteSize": 3
+                },
+                {
+                    "Address": 852,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 853,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 855,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 858,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 859,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 862,
                     "ByteSize": 2,
                     "OperandType": 2
                 }
@@ -30877,6 +30869,11 @@
                     "Address": 835,
                     "LabelType": 2,
                     "Name": "label_9343"
+                },
+                {
+                    "Address": 855,
+                    "LabelType": 2,
+                    "Name": "label_9357"
                 },
                 {
                     "Address": 864,
@@ -32729,6 +32726,51 @@
                     "OperandType": 2
                 },
                 {
+                    "Address": 447,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 450,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 453,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 454,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 456,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 458,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 461,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 464,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 467,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
                     "Address": 469,
                     "ByteSize": 2
                 },
@@ -33918,6 +33960,11 @@
                     "Name": "label_9DAE"
                 },
                 {
+                    "Address": 461,
+                    "LabelType": 2,
+                    "Name": "label_9DCD"
+                },
+                {
                     "Address": 469,
                     "LabelType": 2,
                     "Name": "label_9DD5"
@@ -33946,7 +33993,7 @@
                     "Address": 551,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_9E27"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_9E27"
                 },
                 {
                     "Address": 590,
@@ -34030,7 +34077,7 @@
                     "Address": 992,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_9FE0"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_9FE0"
                 }
             ],
             "PageId": 55
@@ -34261,11 +34308,107 @@
                     "OperandType": 2
                 },
                 {
+                    "Address": 107,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 110,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 111,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 113,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 115,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 117,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 120,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 123,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 125,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 128,
+                    "ByteSize": 1
+                },
+                {
                     "Address": 129,
                     "ByteSize": 2
                 },
                 {
                     "Address": 131,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 132,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 135,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 136,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 138,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 140,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 142,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 145,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 148,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 150,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 153,
                     "ByteSize": 1
                 },
                 {
@@ -34827,6 +34970,151 @@
                 {
                     "Address": 454,
                     "ByteSize": 1
+                },
+                {
+                    "Address": 455,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 458,
+                    "ByteSize": 4,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 462,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 465,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 466,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 467,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 470,
+                    "ByteSize": 3
+                },
+                {
+                    "Address": 473,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 475,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 478,
+                    "ByteSize": 3
+                },
+                {
+                    "Address": 481,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 483,
+                    "ByteSize": 4
+                },
+                {
+                    "Address": 487,
+                    "ByteSize": 4
+                },
+                {
+                    "Address": 491,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 494,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 495,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 497,
+                    "ByteSize": 3
+                },
+                {
+                    "Address": 500,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 501,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 504,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 505,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 506,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 507,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 510,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 513,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 515,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 518,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 519,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 520,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 521,
+                    "ByteSize": 3
+                },
+                {
+                    "Address": 524,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 526,
+                    "ByteSize": 2,
+                    "OperandType": 2
                 },
                 {
                     "Address": 529,
@@ -35801,6 +36089,12 @@
                     "OperandType": 2
                 }
             ],
+            "CommentBlocks": [
+                {
+                    "Address": 221,
+                    "Comment": "this is called to set how many of the selected weapon is assigned to the selected unit"
+                }
+            ],
             "LabelInfo": [
                 {
                     "Address": 1,
@@ -35837,12 +36131,32 @@
                     "Address": 100,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_A064"
+                    "Name": "EquipScreenUpdateWeaponSelect_A064"
+                },
+                {
+                    "Address": 107,
+                    "LabelType": 2,
+                    "Name": "maybeNextWeapon"
+                },
+                {
+                    "Address": 117,
+                    "LabelType": 2,
+                    "Name": "label_A075"
                 },
                 {
                     "Address": 129,
                     "LabelType": 2,
                     "Name": "label_A081"
+                },
+                {
+                    "Address": 132,
+                    "LabelType": 2,
+                    "Name": "maybePrevWeapon"
+                },
+                {
+                    "Address": 142,
+                    "LabelType": 2,
+                    "Name": "label_A08E"
                 },
                 {
                     "Address": 154,
@@ -35860,13 +36174,13 @@
                     "Address": 221,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_A0DD"
+                    "Name": "maybeUpdateAssignUnitWeapon_A0DD"
                 },
                 {
                     "Address": 238,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_A0EE"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_A0EE"
                 },
                 {
                     "Address": 307,
@@ -35917,13 +36231,23 @@
                     "Address": 439,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_A1B7"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_A1B7"
                 },
                 {
                     "Address": 455,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_A1C7"
+                    "Name": "usedInEquipScreenWhenGivingWeaponToUnit_A1C7"
+                },
+                {
+                    "Address": 466,
+                    "LabelType": 2,
+                    "Name": "label_A1D2"
+                },
+                {
+                    "Address": 520,
+                    "LabelType": 2,
+                    "Name": "label_A208"
                 },
                 {
                     "Address": 529,
@@ -41743,7 +42067,8 @@
             "CodeInfo": [
                 {
                     "Address": 446,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "OperandType": 11
                 },
                 {
                     "Address": 447,
@@ -41759,7 +42084,8 @@
                 },
                 {
                     "Address": 451,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "x8"
                 },
                 {
                     "Address": 452,
@@ -41794,7 +42120,7 @@
                 {
                     "Address": 464,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 7
                 },
                 {
                     "Address": 467,
@@ -42454,6 +42780,10 @@
                 }
             ],
             "CommentBlocks": [
+                {
+                    "Address": 446,
+                    "Comment": "A = holds number of units to add"
+                },
                 {
                     "Address": 545,
                     "Comment": "#\nThe scenario/level specific data gets loaded here.\nData is 18913 bytes long and ends at location $ffff.\n#"
@@ -44602,13 +44932,13 @@
                     "Address": 446,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_B5BE"
+                    "Name": "functionUsedInSquadSelect_B5BE"
                 },
                 {
                     "Address": 469,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_B5D5"
+                    "Name": "functionUsedInSquadSelect_B5D5"
                 },
                 {
                     "Address": 473,

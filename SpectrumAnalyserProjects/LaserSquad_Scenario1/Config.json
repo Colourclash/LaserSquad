@@ -14,8 +14,8 @@
         "ViewConfigs": [
             {
                 "Enabled": true,
-                "ViewAddress": 54189,
-                "ViewAddressBank": 4
+                "ViewAddress": 23822,
+                "ViewAddressBank": 2
             },
             {
                 "Enabled": false,
