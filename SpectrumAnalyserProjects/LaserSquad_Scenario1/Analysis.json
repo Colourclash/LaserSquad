@@ -471,6 +471,13 @@
         },
         {
             "Description": "",
+            "EndAddress": 1758134274,
+            "StartAddress": 1758134274,
+            "bManualEdit": false,
+            "bROMFunction": false
+        },
+        {
+            "Description": "",
             "EndAddress": 1763180546,
             "StartAddress": 1763180546,
             "bManualEdit": false,
@@ -3261,16 +3268,19 @@
                 {
                     "Address": 545,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 547,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
                     "Address": 549,
                     "ByteSize": 2,
+                    "Comment": "HL holds screen address of character square",
                     "DataType": 2
                 },
                 {
@@ -3421,6 +3431,12 @@
                     "Global": true,
                     "LabelType": 0,
                     "Name": "data_5C53"
+                },
+                {
+                    "Address": 87,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_5C57"
                 },
                 {
                     "Address": 89,
@@ -4242,7 +4258,7 @@
                     "Address": 419,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_5DA3"
+                    "Name": "dataUsedInScannerScreen_5DA3"
                 },
                 {
                     "Address": 420,
@@ -7091,7 +7107,7 @@
                 },
                 {
                     "Address": 730,
-                    "Comment": "these functions are called when the user presses up and down to select number of units on squad selection screen"
+                    "Comment": "these functions are called when the user presses up and down to select number of units on squad selection screen.\nalso used when the player moves the map cursor to a new square."
                 },
                 {
                     "Address": 869,
@@ -7472,7 +7488,7 @@
                     "Address": 735,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_62DF"
+                    "Name": "mapCursorMovementRelated_62DF"
                 },
                 {
                     "Address": 740,
@@ -9228,7 +9244,7 @@
                 {
                     "Address": 721,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 11
                 },
                 {
                     "Address": 724,
@@ -9258,7 +9274,8 @@
                 },
                 {
                     "Address": 733,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "OperandType": 11
                 },
                 {
                     "Address": 734,
@@ -9288,7 +9305,7 @@
                 {
                     "Address": 744,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 11
                 },
                 {
                     "Address": 747,
@@ -10051,7 +10068,7 @@
                 },
                 {
                     "Address": 733,
-                    "Comment": "The user has pressed up or down to increase the number of units"
+                    "Comment": "The user has pressed up or down to select a new option"
                 },
                 {
                     "Address": 862,
@@ -10776,7 +10793,8 @@
                 },
                 {
                     "Address": 196,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "OperandType": 11
                 },
                 {
                     "Address": 197,
@@ -11683,6 +11701,10 @@
                     "OperandType": 2
                 },
                 {
+                    "Address": 613,
+                    "ByteSize": 1
+                },
+                {
                     "Address": 618,
                     "ByteSize": 1
                 },
@@ -12422,8 +12444,16 @@
                     "Comment": "Return\n#REG:DE# = cursor screen pos\n#REG:HL# = cursor map pos\n"
                 },
                 {
+                    "Address": 196,
+                    "Comment": "called after a menu has been displayed, just before we start updating it"
+                },
+                {
+                    "Address": 259,
+                    "Comment": "we pressed fire to activate the current option"
+                },
+                {
                     "Address": 280,
-                    "Comment": "this is called on the weapon assigment stage of the equip screen when the cursor moves onto a new unit"
+                    "Comment": "this is called on the weapon assigment stage of the equip screen when the cursor moves onto a new unit.\nalso called when an option is activated in any menu in the game"
                 }
             ],
             "LabelInfo": [
@@ -12474,12 +12504,13 @@
                     "Address": 196,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_68C4"
+                    "Name": "maybeSetupMenu"
                 },
                 {
                     "Address": 203,
-                    "LabelType": 2,
-                    "Name": "label_68CB"
+                    "Global": true,
+                    "LabelType": 1,
+                    "Name": "menuRelatedLoop_68CB"
                 },
                 {
                     "Address": 234,
@@ -12499,7 +12530,7 @@
                 {
                     "Address": 259,
                     "LabelType": 2,
-                    "Name": "label_6903"
+                    "Name": "optionActivated"
                 },
                 {
                     "Address": 261,
@@ -12510,7 +12541,7 @@
                     "Address": 280,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "equipScreenNewUnitSelected_6918"
+                    "Name": "optionActivated_6918"
                 },
                 {
                     "Address": 292,
@@ -26358,7 +26389,7 @@
                     "Address": 461,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_85CD"
+                    "Name": "scannerRelatedFunction_85CD"
                 },
                 {
                     "Address": 474,
@@ -26374,7 +26405,7 @@
                     "Address": 740,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "function_86E4"
+                    "Name": "scannerRelatedFunction_86E4"
                 },
                 {
                     "Address": 768,
@@ -42906,7 +42937,7 @@
             "CommentBlocks": [
                 {
                     "Address": 446,
-                    "Comment": "A = holds number of units to add"
+                    "Comment": "A = ? (holds number of units to add in squad select screen)\nused in squad selection screen and other menus in the game"
                 },
                 {
                     "Address": 545,
@@ -45056,7 +45087,7 @@
                     "Address": 446,
                     "Global": true,
                     "LabelType": 1,
-                    "Name": "functionUsedInSquadSelect_B5BE"
+                    "Name": "menuOptionActivated_B5BE"
                 },
                 {
                     "Address": 469,
